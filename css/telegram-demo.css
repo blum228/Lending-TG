@@ -1,0 +1,363 @@
+/* Telegram Demo Styles */
+:root {
+  --tg-bg-primary: #ffffff;
+  --tg-bg-secondary: #f4f4f5;
+  --tg-bg-chat: #e8ebee;
+  --tg-bg-bubble-out: #eeffde;
+  --tg-bg-bubble-in: #ffffff;
+  --tg-text-primary: #000000;
+  --tg-text-secondary: #707579;
+  --tg-text-green: #4fae4e;
+  --tg-accent: #3390ec;
+  --tg-accent-hover: #2b7cd3;
+  --tg-border: #e7e7e7;
+  --tg-hover: rgba(0, 0, 0, 0.04);
+  --tg-active: rgba(51, 144, 236, 0.1);
+  --tg-sidebar-width: 420px;
+  --tg-avatar-size: 54px;
+  --tg-avatar-small: 42px;
+  --tg-radius: 10px;
+  --tg-radius-bubble: 12px;
+}
+
+.telegram-demo-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.phone-frame {
+  width: 375px;
+  height: 812px;
+  background: #000;
+  border-radius: 50px;
+  padding: 12px;
+  box-shadow: 0 50px 100px rgba(0,0,0,0.5), 0 0 0 2px #333, inset 0 0 0 2px #1a1a1a;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.phone-frame * { box-sizing: border-box; }
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--tg-bg-primary);
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--tg-text-primary);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 34px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.phone-status-bar {
+  height: 54px;
+  padding: 14px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tg-text-primary);
+  background: var(--tg-bg-primary);
+  position: relative;
+  z-index: 50;
+}
+
+.phone-status-time { font-size: 15px; font-weight: 600; }
+.phone-status-icons { display: flex; align-items: center; gap: 4px; }
+.phone-status-icons svg { width: 18px; height: 18px; }
+
+.tg-app {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 54px);
+  background: var(--tg-bg-primary);
+  position: relative;
+}
+
+.tg-sidebar {
+  width: 100%;
+  background: var(--tg-bg-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tg-main { display: none; }
+.tg-app.chat-open .tg-sidebar { display: none; }
+.tg-app.chat-open .tg-main { display: flex; }
+
+.tg-sidebar-header {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--tg-border);
+}
+
+.tg-menu-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tg-text-secondary);
+  transition: background 0.15s;
+}
+
+.tg-menu-btn:hover { background: var(--tg-hover); }
+
+.tg-search {
+  flex: 1;
+  height: 42px;
+  padding: 0 12px;
+  border: none;
+  background: var(--tg-bg-secondary);
+  border-radius: 22px;
+  font-size: 14px;
+  color: var(--tg-text-primary);
+  outline: none;
+}
+
+.tg-search::placeholder { color: var(--tg-text-secondary); }
+.tg-chat-list { flex: 1; overflow-y: auto; padding: 8px 0; }
+
+.tg-chat-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+  position: relative;
+}
+
+.tg-chat-item:hover { background: var(--tg-hover); }
+.tg-chat-item.active { background: var(--tg-active); }
+
+.tg-chat-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: var(--tg-accent);
+  border-radius: 0 3px 3px 0;
+}
+
+.tg-avatar {
+  width: var(--tg-avatar-size);
+  height: var(--tg-avatar-size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.tg-avatar.small {
+  width: var(--tg-avatar-small);
+  height: var(--tg-avatar-small);
+  font-size: 16px;
+}
+
+.tg-avatar.red { background: linear-gradient(135deg, #ff885e, #ff516a); }
+.tg-avatar.orange { background: linear-gradient(135deg, #ffcd6a, #ffa85c); }
+.tg-avatar.violet { background: linear-gradient(135deg, #b694f9, #8c75f8); }
+.tg-avatar.green { background: linear-gradient(135deg, #a0de7e, #54cb68); }
+.tg-avatar.cyan { background: linear-gradient(135deg, #53edd6, #28c9b7); }
+.tg-avatar.blue { background: linear-gradient(135deg, #72d5fd, #2a9ef1); }
+.tg-avatar.pink { background: linear-gradient(135deg, #f28fad, #e76e8a); }
+
+.tg-chat-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.tg-chat-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.tg-chat-name { font-size: 15px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tg-chat-time { font-size: 12px; color: var(--tg-text-secondary); flex-shrink: 0; }
+.tg-chat-preview { font-size: 14px; color: var(--tg-text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tg-chat-preview .sender { color: var(--tg-accent); font-weight: 500; }
+
+.tg-badge {
+  background: var(--tg-accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.tg-chat-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.tg-main { flex: 1; display: flex; flex-direction: column; background: var(--tg-bg-chat); min-width: 0; }
+
+.tg-chat-header {
+  height: 56px;
+  padding: 0 16px;
+  background: var(--tg-bg-primary);
+  border-bottom: 1px solid var(--tg-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tg-back-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: var(--tg-text-secondary);
+}
+
+@media (max-width: 900px) { .tg-back-btn { display: flex; } }
+
+.tg-header-info { flex: 1; min-width: 0; }
+.tg-header-title { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tg-header-subtitle { font-size: 13px; color: var(--tg-text-secondary); }
+.tg-header-actions { display: flex; gap: 4px; }
+
+.tg-icon-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tg-text-secondary);
+  transition: background 0.15s;
+}
+
+.tg-icon-btn:hover { background: var(--tg-hover); }
+
+.tg-messages { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 8px 0; }
+.tg-messages-inner { width: 100%; padding: 0 12px 40px; display: flex; flex-direction: column; gap: 4px; }
+.tg-date-separator { display: flex; justify-content: center; padding: 8px 0; }
+
+.tg-date-separator span {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.tg-message { display: flex; gap: 8px; max-width: 85%; align-items: flex-end; }
+.tg-message.incoming { align-self: flex-start; }
+.tg-message.outgoing { align-self: flex-end; flex-direction: row-reverse; }
+.tg-message-avatar { flex-shrink: 0; margin-bottom: 2px; }
+.tg-message.outgoing .tg-message-avatar { display: none; }
+.tg-bubble { padding: 6px 12px 7px; border-radius: var(--tg-radius-bubble); position: relative; word-wrap: break-word; }
+.tg-message.incoming .tg-bubble { background: var(--tg-bg-bubble-in); border-bottom-left-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+.tg-message.outgoing .tg-bubble { background: var(--tg-bg-bubble-out); border-bottom-right-radius: 4px; }
+.tg-message-sender { font-size: 13px; font-weight: 600; margin-bottom: 2px; color: var(--tg-accent); }
+.tg-message-text { font-size: 14px; line-height: 1.4; white-space: pre-wrap; }
+
+.tg-message-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 2px;
+  float: right;
+  margin-left: 12px;
+  position: relative;
+  top: 5px;
+}
+
+.tg-message-time { font-size: 11px; color: var(--tg-text-secondary); }
+.tg-message.outgoing .tg-message-time { color: var(--tg-text-green); }
+.tg-read-status { color: var(--tg-text-green); font-size: 14px; }
+.tg-forwarded { font-size: 13px; color: var(--tg-accent); font-weight: 500; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+.tg-forwarded-from { font-weight: 400; color: var(--tg-text-secondary); }
+.tg-channel-name { color: var(--tg-accent); font-weight: 600; }
+.tg-input-area { padding: 8px 16px 12px; background: var(--tg-bg-primary); border-top: 1px solid var(--tg-border); }
+
+.tg-input-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  background: var(--tg-bg-secondary);
+  border-radius: 22px;
+  padding: 4px;
+}
+
+.tg-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  max-height: 200px;
+  line-height: 1.4;
+}
+
+.tg-input::placeholder { color: var(--tg-text-secondary); }
+
+.tg-send-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--tg-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background 0.15s;
+}
+
+.tg-send-btn:hover { background: var(--tg-accent-hover); }
+
+.tg-app ::-webkit-scrollbar { width: 6px; }
+.tg-app ::-webkit-scrollbar-track { background: transparent; }
+.tg-app ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
+.tg-app ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.3); }
+
+.icon { width: 24px; height: 24px; fill: currentColor; }
+.icon.small { width: 18px; height: 18px; }
+
+.tg-message { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+.tg-message.animate-in { opacity: 1; transform: translateY(0); }
+.tg-date-separator { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.tg-date-separator.animate-in { opacity: 1; transform: translateY(0); }
