@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Блог — Clarity Bot</title>
+    <link rel="icon" type="image/svg+xml" href="images/gallery/123.svg" />
+    <link rel="shortcut icon" type="image/svg+xml" href="images/gallery/123.svg" />
+    <link rel="apple-touch-icon" href="images/gallery/123.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/ids.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+  </head>
+
+  <body class="ids">
+    <header class="ids__header">
+      <div class="ids__wrapper M">
+        <nav class="header">
+          <a class="header__logo" href="/">
+            <img src="images/gallery/123.svg" alt="Clarity Bot logo" class="header__logo-image" />
+            Clarity Bot
+          </a>
+    
+          <ul class="header__menu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/#pricing">Цены</a></li>
+            <li><a href="blog.html">Блог</a></li>
+          </ul>
+    
+          <a class="header__button" href="downloads/app.exe">Попробовать</a>
+          
+          <button class="header__burger" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="mobile-menu">
+      <button class="mobile-menu__close" aria-label="Закрыть меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <ul class="mobile-menu__list">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/#pricing">Цены</a></li>
+        <li><a href="blog.html">Блог</a></li>
+      </ul>
+    </div>
+    
+    <main>
+      <!-- Blog Hero -->
+      <section class="blog-hero">
+        <div class="ids__wrapper L">
+          <h1 class="blog-hero__title">Блог</h1>
+          <p class="blog-hero__subtitle">Советы по продуктивности, новости и обновления Clarity Bot</p>
+        </div>
+      </section>
+      
+      <!-- Blog Posts -->
+      <section class="blog-section">
+        <div class="ids__wrapper L">
+          <div class="blog-grid">
+            <!-- Post 1 -->
+            <article class="blog-card">
+              <div class="blog-card__content">
+                <span class="blog-card__tag">Продуктивность</span>
+                <h2 class="blog-card__title">Как перестать тонуть в Telegram-каналах</h2>
+                <p class="blog-card__excerpt">5 простых стратегий, которые помогут вам читать только важное и экономить до 2 часов в день.</p>
+                <div class="blog-card__meta">
+                  <span class="blog-card__date">15 ноября 2024</span>
+                  <span class="blog-card__read-time">5 мин чтения</span>
+                </div>
+              </div>
+            </article>
+            
+            <!-- Post 2 -->
+            <article class="blog-card">
+              <div class="blog-card__content">
+                <span class="blog-card__tag">Обновления</span>
+                <h2 class="blog-card__title">Новая функция: AI-саммари для групп каналов</h2>
+                <p class="blog-card__excerpt">Теперь вы можете получать единый дайджест из всех каналов в группе. Рассказываем, как это работает.</p>
+                <div class="blog-card__meta">
+                  <span class="blog-card__date">8 ноября 2024</span>
+                  <span class="blog-card__read-time">3 мин чтения</span>
+                </div>
+              </div>
+            </article>
+            
+            <!-- Post 3 -->
+            <article class="blog-card">
+              <div class="blog-card__content">
+                <span class="blog-card__tag">Гайды</span>
+                <h2 class="blog-card__title">Полный гайд по настройке правил пересылки</h2>
+                <p class="blog-card__excerpt">Пошаговая инструкция по созданию умных правил, которые автоматически сортируют ваши сообщения.</p>
+                <div class="blog-card__meta">
+                  <span class="blog-card__date">1 ноября 2024</span>
+                  <span class="blog-card__read-time">7 мин чтения</span>
+                </div>
+              </div>
+            </article>
+            
+            <!-- Post 4 -->
+            <article class="blog-card">
+              <div class="blog-card__content">
+                <span class="blog-card__tag">Кейсы</span>
+                <h2 class="blog-card__title">Как маркетолог сократил время на мониторинг в 3 раза</h2>
+                <p class="blog-card__excerpt">История Алексея, который следит за 50+ каналами и теперь тратит на это 20 минут вместо часа.</p>
+                <div class="blog-card__meta">
+                  <span class="blog-card__date">25 октября 2024</span>
+                  <span class="blog-card__read-time">4 мин чтения</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="ids__wrapper L">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <a class="footer__logo" href="/">
+              <img src="images/gallery/123.svg" alt="Clarity Bot" class="footer__logo-image" />
+              Clarity Bot
+            </a>
+            <p class="footer__tagline">Автоматизация Telegram для продуктивных людей</p>
+          </div>
+          <div class="footer__links">
+            <a href="/#pricing">Тарифы</a>
+            <a href="#">Документация</a>
+            <a href="#">Поддержка</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 Clarity Bot. Все права защищены.</span>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      // Mobile menu toggle
+      const burger = document.querySelector('.header__burger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeBtn = document.querySelector('.mobile-menu__close');
+      const body = document.body;
+      
+      function openMenu() {
+        mobileMenu.classList.add('mobile-menu--active');
+        burger.classList.add('header__burger--active');
+        body.style.overflow = 'hidden';
+      }
+      
+      function closeMenu() {
+        mobileMenu.classList.remove('mobile-menu--active');
+        burger.classList.remove('header__burger--active');
+        body.style.overflow = '';
+      }
+      
+      burger.addEventListener('click', function() {
+        if (mobileMenu.classList.contains('mobile-menu--active')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+      
+      closeBtn.addEventListener('click', closeMenu);
+      
+      // Close menu when clicking on a link
+      const mobileLinks = document.querySelectorAll('.mobile-menu__list a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    </script>
+  </body>
+</html>

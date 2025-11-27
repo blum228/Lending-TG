@@ -29,9 +29,9 @@
           </a>
     
           <ul class="header__menu">
-            <li><a href="#pricing">Главная</a></li>
-            <li><a href="#docs">Цены</a></li>
-            <li><a href="#blog">Блог</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="#pricing">Цены</a></li>
+            <li><a href="blog.html">Блог</a></li>
           </ul>
     
           <a class="header__button" href="downloads/app.exe">Попробовать</a>
@@ -46,10 +46,16 @@
     </header>
     
     <div class="mobile-menu">
+      <button class="mobile-menu__close" aria-label="Закрыть меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
       <ul class="mobile-menu__list">
-        <li><a href="#pricing">Главная</a></li>
-        <li><a href="#docs">О нас</a></li>
-        <li><a href="#blog">Блог</a></li>
+        <li><a href="/">Главная</a></li>
+        <li><a href="#pricing">Цены</a></li>
+        <li><a href="blog.html">Блог</a></li>
       </ul>
     </div>
     <main>
@@ -59,10 +65,102 @@
           <div class="hero-section__grid">
             <div class="hero-section__content">
               <h1 class="hero-section__title">Автоматизация и порядок в Telegram</h1>
+              <p class="hero-section__subtitle">Группируйте каналы, получайте AI-саммари и не пропускайте важное</p>
               <div class="hero-section__cta">
-                <a class="button button--primary button--large" href="downloads/app.exe">Попробовать</a>
-                <a class="button button--secondary button--large" href="#demo">Как это работает?</a>
+                <a class="button button--primary" href="downloads/app.exe">Попробовать бесплатно</a>
+                <a class="button button--secondary" href="#how-it-works">Как это работает?</a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Comparison Section -->
+      <section class="comparison-section" id="comparison">
+        <div class="ids__wrapper L">
+          <div class="section-header">
+            <h2 class="section-title">Почему Clarity Bot?</h2>
+            <p class="section-subtitle">Сравните возможности с другими решениями</p>
+          </div>
+          
+          <div class="comparison-table">
+            <div class="comparison-table__header">
+              <div class="comparison-table__cell comparison-table__cell--feature">Возможности</div>
+              <div class="comparison-table__cell comparison-table__cell--product comparison-table__cell--highlight">Clarity Bot</div>
+              <div class="comparison-table__cell comparison-table__cell--product">Папки Telegram</div>
+              <div class="comparison-table__cell comparison-table__cell--product">Junction Bot</div>
+            </div>
+            
+            <div class="comparison-table__row">
+              <div class="comparison-table__cell comparison-table__cell--feature">AI-саммари сообщений</div>
+              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
+              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
+              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
+            </div>
+            
+            <div class="comparison-table__row">
+              <div class="comparison-table__cell comparison-table__cell--feature">Умная группировка каналов</div>
+              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
+              <div class="comparison-table__cell"><span class="comparison-partial">~</span></div>
+              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
+            </div>
+            
+            <div class="comparison-table__row">
+              <div class="comparison-table__cell comparison-table__cell--feature">Автопересылка по правилам</div>
+              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
+              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
+              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
+            </div>
+            
+            <div class="comparison-table__row">
+              <div class="comparison-table__cell comparison-table__cell--feature">Работает без Premium</div>
+              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
+              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
+              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
+            </div>
+            
+            <div class="comparison-table__row">
+              <div class="comparison-table__cell comparison-table__cell--feature">Приоритет важных сообщений</div>
+              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
+              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
+              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
+            </div>
+            
+            <div class="comparison-table__row">
+              <div class="comparison-table__cell comparison-table__cell--feature">Бесплатный тариф</div>
+              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
+              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
+              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- How It Works Section -->
+      <section class="how-it-works-section" id="how-it-works">
+        <div class="ids__wrapper L">
+          <div class="section-header">
+            <h2 class="section-title">Как это работает</h2>
+            <p class="section-subtitle">Три простых шага до порядка в Telegram</p>
+          </div>
+          
+          <div class="steps">
+            <div class="step">
+              <div class="step__number">1</div>
+              <h3 class="step__title">Подключите бота</h3>
+              <p class="step__text">Запустите Clarity Bot в Telegram и авторизуйтесь за 30 секунд</p>
+            </div>
+            
+            <div class="step">
+              <div class="step__number">2</div>
+              <h3 class="step__title">Настройте группы</h3>
+              <p class="step__text">Создайте тематические группы и добавьте в них каналы</p>
+            </div>
+            
+            <div class="step">
+              <div class="step__number">3</div>
+              <h3 class="step__title">Получайте саммари</h3>
+              <p class="step__text">AI соберёт главное из всех каналов в удобный дайджест</p>
             </div>
           </div>
         </div>
@@ -160,8 +258,7 @@
       <section class="pricing-section" id="pricing">
         <div class="ids__wrapper L">
           <div class="section-header">
-            <h6 class="section-label">Тарифы</h6>
-            <h2 class="section-title">Выберите подходящий план</h2>
+            <h2 class="section-title">Тарифы</h2>
             <p class="section-subtitle">Начните бесплатно, масштабируйтесь по мере роста</p>
           </div>
           
@@ -169,7 +266,7 @@
             <!-- Free Plan -->
             <div class="pricing-card">
               <div class="pricing-card__header">
-                <span class="pricing-card__name">Старт</span>
+                <span class="pricing-card__name">Бесплатный</span>
                 <div class="pricing-card__price">
                   <span class="pricing-card__amount">0 ₽</span>
                   <span class="pricing-card__period">навсегда</span>
@@ -187,14 +284,14 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Базовая пересылка
+                  Базовая пересылка сообщений
                 </li>
-                <li class="disabled">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                  Приоритетная поддержка
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Поддержка через бота
                 </li>
               </ul>
-              <a href="#" class="pricing-card__button pricing-card__button--secondary">Начать бесплатно</a>
+              <a href="#" class="button button--secondary">Начать бесплатно</a>
             </div>
             
             <!-- Pro Plan -->
@@ -211,7 +308,7 @@
               <ul class="pricing-card__features">
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Безлимитные группы
+                  Безлимитные группы каналов
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -219,15 +316,57 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Продвинутая пересылка
+                  Продвинутые правила пересылки
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Приоритетная поддержка
+                  Приоритетная поддержка 24/7
                 </li>
               </ul>
-              <a href="#" class="pricing-card__button">Выбрать Про</a>
+              <a href="#" class="button button--primary">Выбрать Про</a>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="ids__wrapper L">
+          <div class="section-header">
+            <h2 class="section-title">Частые вопросы</h2>
+          </div>
+          
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-item__question">Как начать пользоваться Clarity Bot?</summary>
+              <p class="faq-item__answer">Найдите @ClarityBot в Telegram, нажмите «Старт» и следуйте инструкциям. Настройка занимает меньше минуты.</p>
+            </details>
+            
+            <details class="faq-item">
+              <summary class="faq-item__question">Безопасно ли подключать свой аккаунт?</summary>
+              <p class="faq-item__answer">Да, мы используем официальный Telegram API и не храним ваши сообщения. Бот работает только с теми каналами, которые вы добавите.</p>
+            </details>
+            
+            <details class="faq-item">
+              <summary class="faq-item__question">Можно ли отменить подписку?</summary>
+              <p class="faq-item__answer">Конечно. Вы можете отменить подписку в любой момент, и она будет действовать до конца оплаченного периода.</p>
+            </details>
+            
+            <details class="faq-item">
+              <summary class="faq-item__question">Чем Clarity Bot лучше папок Telegram?</summary>
+              <p class="faq-item__answer">Папки только группируют чаты. Clarity Bot добавляет AI-саммари, умную пересылку и приоритизацию важных сообщений — всё это без Telegram Premium.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="ids__wrapper L">
+          <div class="cta-section__content">
+            <h2 class="cta-section__title">Готовы навести порядок в Telegram?</h2>
+            <p class="cta-section__text">Присоединяйтесь к тысячам пользователей, которые уже экономят время</p>
+            <a href="downloads/app.exe" class="button button--primary">Попробовать бесплатно</a>
           </div>
         </div>
       </section>
@@ -258,22 +397,35 @@
       // Mobile menu toggle
       const burger = document.querySelector('.header__burger');
       const mobileMenu = document.querySelector('.mobile-menu');
+      const closeBtn = document.querySelector('.mobile-menu__close');
       const body = document.body;
       
+      function openMenu() {
+        mobileMenu.classList.add('mobile-menu--active');
+        burger.classList.add('header__burger--active');
+        body.style.overflow = 'hidden';
+      }
+      
+      function closeMenu() {
+        mobileMenu.classList.remove('mobile-menu--active');
+        burger.classList.remove('header__burger--active');
+        body.style.overflow = '';
+      }
+      
       burger.addEventListener('click', function() {
-        mobileMenu.classList.toggle('mobile-menu--active');
-        burger.classList.toggle('header__burger--active');
-        body.style.overflow = mobileMenu.classList.contains('mobile-menu--active') ? 'hidden' : '';
+        if (mobileMenu.classList.contains('mobile-menu--active')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
       });
+      
+      closeBtn.addEventListener('click', closeMenu);
       
       // Close menu when clicking on a link
       const mobileLinks = document.querySelectorAll('.mobile-menu__list a');
       mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileMenu.classList.remove('mobile-menu--active');
-          burger.classList.remove('header__burger--active');
-          body.style.overflow = '';
-        });
+        link.addEventListener('click', closeMenu);
       });
     </script>
     <script src="js/telegram-demo.js"></script>
