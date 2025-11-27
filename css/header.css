@@ -37,9 +37,9 @@
     background-color: rgb(var(--ids__link-RGB));
     color: #fff !important;
     list-style: none !important;
-    padding: var(--btn-padding-md);
+    padding: var(--btn-padding-sm);
     text-decoration: none !important;
-    font-size: var(--btn-font-md);
+    font-size: var(--btn-font-sm);
     border-radius: 100px;
     font-weight: 600;
     transition: background-color 0.2s ease, transform 0.1s ease;
