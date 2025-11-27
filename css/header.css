@@ -3,9 +3,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(var(--ids__background-RGB), 1);
+    background: transparent;
     backdrop-filter: saturate(180%) blur(10px);
-    /* border-bottom: 1px solid rgba(var(--ids__text-RGB), 0.08); */
     transition: box-shadow 0.2s ease;
 }
 

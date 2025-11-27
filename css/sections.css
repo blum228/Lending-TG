@@ -64,6 +64,7 @@
 .button--primary {
   background: rgb(var(--ids__link-RGB));
   color: #fff !important;
+  box-shadow: 0 4px 14px rgba(101, 122, 218, 0.35);
 }
 
 .button--primary:hover {
@@ -97,6 +98,7 @@
 .hero-section {
   padding: calc(var(--ids__density) * 5em) 0 calc(var(--ids__density) * 4em);
   text-align: center;
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(101, 122, 218, 0.08) 0%, transparent 60%);
 }
 
 .hero-section__content {
@@ -110,7 +112,7 @@
   line-height: 1.15;
   margin-bottom: 1.5em;
   color: rgb(var(--ids__text-RGB));
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 
 .hero-section__subtitle {
@@ -150,6 +152,8 @@
   background: rgb(var(--ids__surface-RGB));
   border-radius: 24px;
   padding: calc(var(--ids__density) * 3em) calc(var(--ids__density) * 3em);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(var(--ids__text-RGB), 0.04);
 }
 
 .demo-section__phone {
@@ -179,22 +183,22 @@
 .pricing-card {
   position: relative;
   background: rgb(var(--ids__background-RGB));
-  border: 1px solid rgba(var(--ids__text-RGB), 0.1);
+  border: 1px solid rgba(var(--ids__text-RGB), 0.06);
   border-radius: 1.2em;
   padding: 2em;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .pricing-card:hover {
-  border-color: rgba(var(--ids__link-RGB), 0.3);
+  border-color: rgba(var(--ids__link-RGB), 0.15);
 }
 
 /* Featured card */
 .pricing-card--featured {
   border: 2px solid rgb(var(--ids__link-RGB));
-  box-shadow: 0 8px 40px rgba(var(--ids__link-RGB), 0.15);
+  box-shadow: 0 8px 40px rgba(101, 122, 218, 0.18), 0 2px 8px rgba(101, 122, 218, 0.1);
 }
 
 .pricing-card__badge {
