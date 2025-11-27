@@ -217,22 +217,33 @@
           </div>
           
           <div class="features-grid">
-            <!-- Feature 1: Aggregation -->
+            <!-- Feature 1: Aggregation (Many to One) -->
             <div class="feature-card feature-card--summary">
               <div class="feature-visual">
-                <div class="aggregation-visual">
-                  <div class="agg-sources">
-                    <div class="agg-source"></div>
-                    <div class="agg-source"></div>
-                    <div class="agg-source"></div>
+                <div class="visual-aggregation">
+                  <!-- Left: Sources -->
+                  <div class="va-sources">
+                    <div class="va-source va-source--1">
+                      <span>A</span>
+                    </div>
+                    <div class="va-source va-source--2">
+                      <span>B</span>
+                    </div>
+                    <div class="va-source va-source--3">
+                      <span>C</span>
+                    </div>
                   </div>
-                  <div class="agg-arrow">
-                    <div class="agg-line"></div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18l6-6-6-6"/></svg>
+                  
+                  <!-- Center: Connection -->
+                  <div class="va-connect">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 17l5-5-5-5M6 12h12"/></svg>
                   </div>
-                  <div class="agg-feed">
-                    <div class="agg-feed-item"></div>
-                    <div class="agg-feed-item"></div>
+                  
+                  <!-- Right: Target Feed -->
+                  <div class="va-feed">
+                    <div class="va-post va-post--1"></div>
+                    <div class="va-post va-post--2"></div>
+                    <div class="va-post va-post--3"></div>
                   </div>
                 </div>
               </div>
@@ -242,23 +253,40 @@
               </div>
             </div>
             
-            <!-- Feature 2: No Noise -->
+            <!-- Feature 2: Focus (Chaos vs Order) -->
             <div class="feature-card feature-card--groups">
               <div class="feature-visual">
-                <div class="noise-visual">
-                   <div class="noise-stack">
-                     <div class="noise-dot red"></div>
-                     <div class="noise-dot red"></div>
-                     <div class="noise-dot red"></div>
-                   </div>
-                   <div class="noise-arrow">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
-                   </div>
-                   <div class="noise-clean">
-                     <div class="noise-check">
-                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                     </div>
-                   </div>
+                <div class="visual-focus">
+                  <!-- Chaos State -->
+                  <div class="vf-state vf-state--chaos">
+                    <div class="vf-item">
+                      <div class="vf-line"></div>
+                      <div class="vf-badge">5</div>
+                    </div>
+                    <div class="vf-item">
+                      <div class="vf-line"></div>
+                      <div class="vf-badge">12</div>
+                    </div>
+                    <div class="vf-item">
+                      <div class="vf-line"></div>
+                      <div class="vf-badge">8</div>
+                    </div>
+                  </div>
+                  
+                  <!-- Transition Arrow -->
+                  <div class="vf-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                  </div>
+                  
+                  <!-- Zen State -->
+                  <div class="vf-state vf-state--zen">
+                    <div class="vf-zen-item">
+                      <div class="vf-icon-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                      </div>
+                      <span>Feed</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="feature-card__body">
@@ -267,19 +295,25 @@
               </div>
             </div>
             
-            <!-- Feature 3: Routing -->
+            <!-- Feature 3: Router (Filter) -->
             <div class="feature-card feature-card--forward">
               <div class="feature-visual">
-                <div class="forward-visual">
-                  <div class="msg-card msg-card--source">
-                    <div class="skeleton-line w-70"></div>
+                <div class="visual-router">
+                  <!-- Incoming Stream -->
+                  <div class="vr-stream">
+                    <div class="vr-msg vr-msg--junk"></div>
+                    <div class="vr-msg vr-msg--valid"></div>
+                    <div class="vr-msg vr-msg--junk"></div>
                   </div>
-                  <div class="forward-path">
-                    <div class="forward-line"></div>
-                    <div class="forward-status">#Tech</div>
+                  
+                  <!-- The Filter Gate -->
+                  <div class="vr-gate">
+                    <div class="vr-bar"></div>
                   </div>
-                  <div class="msg-card msg-card--dest">
-                    <div class="skeleton-line w-70"></div>
+                  
+                  <!-- Output -->
+                  <div class="vr-output">
+                    <div class="vr-msg vr-msg--valid vr-msg--passed"></div>
                   </div>
                 </div>
               </div>
