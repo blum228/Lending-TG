@@ -64,11 +64,234 @@
         <div class="ids__wrapper L">
           <div class="hero-section__grid">
             <div class="hero-section__content">
-              <h1 class="hero-section__title">Автоматизация и порядок в Telegram</h1>
-              <p class="hero-section__subtitle">Группируйте каналы, получайте AI-саммари и не пропускайте важное</p>
+              <h1 class="hero-section__title">Порядок в Telegram<br>за 5 минут</h1>
+              <p class="hero-section__subtitle">AI-саммари каналов, умная группировка и автопересылка — без Telegram Premium</p>
               <div class="hero-section__cta">
-                <a class="button button--primary" href="downloads/app.exe">Попробовать бесплатно</a>
-                <a class="button button--secondary" href="#how-it-works">Как это работает?</a>
+                <a class="button button--primary" href="downloads/app.exe">Начать бесплатно</a>
+                <a class="button button--secondary" href="#how-it-works">Узнать больше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Product Demo Section -->
+      <section class="demo-section" id="demo">
+        <div class="ids__wrapper M">
+          <div class="demo-layout">
+            <!-- Left Column: Content -->
+            <div class="demo-content">
+              <h2 class="demo-title">Работает там, где<br>вы общаетесь</h2>
+              <p class="demo-description">
+                Забудьте о переключении между приложениями. Clarity Bot встраивается в ваш Telegram и ощущается как нативная часть мессенджера.
+              </p>
+              
+              <ul class="demo-features-list">
+                <li class="demo-feature">
+                  <div class="demo-feature__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div class="demo-feature__text">
+                    <strong>Безопасно по умолчанию</strong>
+                    <span>Работает через официальный API без доступа к личным перепискам</span>
+                  </div>
+                </li>
+                <li class="demo-feature">
+                  <div class="demo-feature__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  </div>
+                  <div class="demo-feature__text">
+                    <strong>Мгновенный отклик</strong>
+                    <span>Никаких долгих загрузок — бот отвечает за миллисекунды</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right Column: Phone -->
+            <div class="demo-visual">
+              <div class="demo-visual__bg"></div>
+              <div class="demo-section__phone">
+                <div class="telegram-demo-wrapper">
+                  <!-- Phone Frame content remains the same -->
+                  <div class="phone-frame">
+                    <div class="phone-screen">
+                      <div class="phone-notch"></div>
+                      <div class="phone-status-bar">
+                        <span class="phone-status-time">9:41</span>
+                        <div class="phone-status-icons">
+                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V3c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 4.36 6 6.92 6 10v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4zM13 18h-2v-2h2v2zm0-4h-2V9h2v5z"/></svg>
+                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                        </div>
+                      </div>
+                      
+                      <div class="tg-app" id="app">
+                    <!-- SIDEBAR -->
+                    <aside class="tg-sidebar">
+                      <div class="tg-sidebar-header">
+                        <button class="tg-menu-btn">
+                          <svg class="icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                        </button>
+                        <input type="text" class="tg-search" placeholder="Поиск">
+                      </div>
+                      
+                      <div class="tg-chat-list" id="chatList">
+                        <!-- Chat items will be injected by JS -->
+                      </div>
+                    </aside>
+                    
+                    <!-- MAIN CHAT -->
+                    <main class="tg-main" id="mainChat">
+                      <div class="tg-chat-header" id="chatHeader" style="display: none;">
+                        <button class="tg-back-btn" onclick="closeChat()" style="display: flex;">
+                          <svg class="icon" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        </button>
+                        <div class="tg-avatar small blue" id="headerAvatar">Д</div>
+                        <div class="tg-header-info">
+                          <div class="tg-header-title" id="headerTitle">Дизайн</div>
+                          <div class="tg-header-subtitle" id="headerSubtitle">12 каналов</div>
+                        </div>
+                        <div class="tg-header-actions">
+                          <button class="tg-icon-btn">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                          </button>
+                          <button class="tg-icon-btn">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <div class="tg-messages" id="messagesArea" style="display: none;">
+                        <div class="tg-messages-inner" id="messagesInner">
+                          <!-- Messages will be injected by JS -->
+                        </div>
+                      </div>
+                      
+                      <div class="tg-input-area" id="inputArea" style="display: none;">
+                        <div class="tg-input-wrapper">
+                          <button class="tg-icon-btn" style="color: var(--tg-text-secondary);">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+                          </button>
+                          <textarea class="tg-input" placeholder="Сообщение" rows="1" readonly></textarea>
+                          <button class="tg-send-btn">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                          </button>
+                        </div>
+                      </div>
+                    </main>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Features Section (NEW) -->
+      <section class="features-section" id="features">
+        <div class="ids__wrapper L">
+          <div class="section-header">
+            <h2 class="section-title">Что умеет Clarity Bot</h2>
+            <p class="section-subtitle">Три ключевые функции для продуктивной работы с Telegram</p>
+          </div>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  <path d="M8 10h8M8 14h4"/>
+                </svg>
+              </div>
+              <div class="feature-card__body">
+                <h3 class="feature-card__title">AI-саммари</h3>
+                <p class="feature-card__text">Краткая выжимка из сотен сообщений за секунды</p>
+              </div>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              <div class="feature-card__body">
+                <h3 class="feature-card__title">Умные группы</h3>
+                <p class="feature-card__text">Объединяйте каналы по темам и читайте в одном месте</p>
+              </div>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 1l4 4-4 4"/>
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                  <path d="M7 23l-4-4 4-4"/>
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                </svg>
+              </div>
+              <div class="feature-card__body">
+                <h3 class="feature-card__title">Автопересылка</h3>
+                <p class="feature-card__text">Бот сам перешлёт важное в нужный чат по правилам</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- How It Works Section -->
+      <section class="how-it-works-section" id="how-it-works">
+        <div class="ids__wrapper L">
+          <div class="section-header">
+            <h2 class="section-title">Начните за 3 шага</h2>
+            <p class="section-subtitle">Простая настройка, мощный результат</p>
+          </div>
+          
+          <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-number">01</div>
+                <h3 class="timeline-title">Подключите бота</h3>
+                <p class="timeline-text">Найдите @ClarityBot в Telegram и нажмите «Старт». Никаких регистраций на сайтах и сложных паролей.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="visual-start-btn">
+                  <span>Start</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="timeline-item reverse">
+              <div class="timeline-content">
+                <div class="timeline-number">02</div>
+                <h3 class="timeline-title">Настройте ленту</h3>
+                <p class="timeline-text">Создайте группы для каналов (например, «Новости», «Дизайн») и добавьте в них источники. Бот сам подскажет.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="visual-toggles">
+                  <div class="visual-toggle active"></div>
+                  <div class="visual-toggle"></div>
+                  <div class="visual-toggle active"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-number">03</div>
+                <h3 class="timeline-title">Получайте главное</h3>
+                <p class="timeline-text">Каждое утро (или когда удобно) вы будете получать сжатую выжимку самого важного. Экономьте часы чтения.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="visual-message">
+                  <div class="visual-message-line w-70"></div>
+                  <div class="visual-message-line w-50"></div>
+                  <div class="visual-message-line w-40"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -79,176 +302,130 @@
       <section class="comparison-section" id="comparison">
         <div class="ids__wrapper L">
           <div class="section-header">
-            <h2 class="section-title">Почему Clarity Bot?</h2>
-            <p class="section-subtitle">Сравните возможности с другими решениями</p>
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-subtitle">Сравните возможности и выберите лучшее решение</p>
           </div>
           
-          <div class="comparison-table">
-            <div class="comparison-table__header">
-              <div class="comparison-table__cell comparison-table__cell--feature">Возможности</div>
-              <div class="comparison-table__cell comparison-table__cell--product comparison-table__cell--highlight">Clarity Bot</div>
-              <div class="comparison-table__cell comparison-table__cell--product">Папки Telegram</div>
-              <div class="comparison-table__cell comparison-table__cell--product">Junction Bot</div>
-            </div>
-            
-            <div class="comparison-table__row">
-              <div class="comparison-table__cell comparison-table__cell--feature">AI-саммари сообщений</div>
-              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
-              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
-              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
-            </div>
-            
-            <div class="comparison-table__row">
-              <div class="comparison-table__cell comparison-table__cell--feature">Умная группировка каналов</div>
-              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
-              <div class="comparison-table__cell"><span class="comparison-partial">~</span></div>
-              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
-            </div>
-            
-            <div class="comparison-table__row">
-              <div class="comparison-table__cell comparison-table__cell--feature">Автопересылка по правилам</div>
-              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
-              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
-              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
-            </div>
-            
-            <div class="comparison-table__row">
-              <div class="comparison-table__cell comparison-table__cell--feature">Работает без Premium</div>
-              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
-              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
-              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
-            </div>
-            
-            <div class="comparison-table__row">
-              <div class="comparison-table__cell comparison-table__cell--feature">Приоритет важных сообщений</div>
-              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
-              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
-              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
-            </div>
-            
-            <div class="comparison-table__row">
-              <div class="comparison-table__cell comparison-table__cell--feature">Бесплатный тариф</div>
-              <div class="comparison-table__cell comparison-table__cell--highlight"><span class="comparison-check">✓</span></div>
-              <div class="comparison-table__cell"><span class="comparison-check">✓</span></div>
-              <div class="comparison-table__cell"><span class="comparison-cross">✗</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- How It Works Section -->
-      <section class="how-it-works-section" id="how-it-works">
-        <div class="ids__wrapper L">
-          <div class="section-header">
-            <h2 class="section-title">Как это работает</h2>
-            <p class="section-subtitle">Три простых шага до порядка в Telegram</p>
-          </div>
-          
-          <div class="steps">
-            <div class="step">
-              <div class="step__number">1</div>
-              <h3 class="step__title">Подключите бота</h3>
-              <p class="step__text">Запустите Clarity Bot в Telegram и авторизуйтесь за 30 секунд</p>
-            </div>
-            
-            <div class="step">
-              <div class="step__number">2</div>
-              <h3 class="step__title">Настройте группы</h3>
-              <p class="step__text">Создайте тематические группы и добавьте в них каналы</p>
-            </div>
-            
-            <div class="step">
-              <div class="step__number">3</div>
-              <h3 class="step__title">Получайте саммари</h3>
-              <p class="step__text">AI соберёт главное из всех каналов в удобный дайджест</p>
-            </div>
-          </div>
-        </div>
-      </section>
-        
-      <!-- Demo Section -->
-      <section class="demo-section">
-        <div class="ids__wrapper M">
-          <div class="demo-section__card">
-            <div class="demo-section__grid">
-              <!-- Text content left -->
-              <div class="demo-section__content">
-                <h2 class="demo-section__title">Все каналы в одном месте</h2>
-                <p class="demo-section__text">Группируйте каналы по темам, получайте AI-саммари и не пропускайте важное</p>
-                <a href="#pricing" class="demo-section__link">Узнать подробнее →</a>
+          <div class="comparison-cards">
+            <!-- Telegram Folders -->
+            <div class="comparison-card">
+              <div class="comparison-card__header">
+                <div class="comparison-card__name">Папки Telegram</div>
+                <div class="comparison-card__type">Встроенная функция</div>
               </div>
-              
-              <!-- Demo right -->
-              <div class="demo-section__phone">
-                <div class="demo-section__phone-wrapper">
-              <div class="telegram-demo-wrapper">
-                <!-- Phone Frame -->
-                <div class="phone-frame">
-                  <div class="phone-screen">
-                    <div class="phone-notch"></div>
-                    <div class="phone-status-bar">
-                      <span class="phone-status-time">9:41</span>
-                      <div class="phone-status-icons">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V3c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 4.36 6 6.92 6 10v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4zM13 18h-2v-2h2v2zm0-4h-2V9h2v5z"/></svg>
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
-                      </div>
-                    </div>
-                    
-                    <div class="tg-app" id="app">
-                      <!-- SIDEBAR -->
-                      <aside class="tg-sidebar">
-                        <div class="tg-sidebar-header">
-                          <button class="tg-menu-btn">
-                            <svg class="icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                          </button>
-                          <input type="text" class="tg-search" placeholder="Поиск">
-                        </div>
-                        <div class="tg-chat-list" id="chatList"></div>
-                      </aside>
-                  
-                      <!-- MAIN CHAT -->
-                      <div class="tg-main" id="mainChat">
-                        <div class="tg-chat-header" id="chatHeader" style="display: none;">
-                          <button class="tg-back-btn" onclick="closeChat()" style="display: flex;">
-                            <svg class="icon" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-                          </button>
-                          <div class="tg-avatar small blue" id="headerAvatar">Д</div>
-                          <div class="tg-header-info">
-                            <div class="tg-header-title" id="headerTitle">Дизайн</div>
-                            <div class="tg-header-subtitle" id="headerSubtitle">12 каналов</div>
-                          </div>
-                          <div class="tg-header-actions">
-                            <button class="tg-icon-btn">
-                              <svg class="icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                            </button>
-                            <button class="tg-icon-btn">
-                              <svg class="icon" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                            </button>
-                          </div>
-                        </div>
-                        
-                        <div class="tg-messages" id="messagesArea" style="display: none;">
-                          <div class="tg-messages-inner" id="messagesInner"></div>
-                        </div>
-                        
-                        <div class="tg-input-area" id="inputArea" style="display: none;">
-                          <div class="tg-input-wrapper">
-                            <button class="tg-icon-btn" style="color: var(--tg-text-secondary);">
-                              <svg class="icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
-                            </button>
-                            <textarea class="tg-input" placeholder="Сообщение" rows="1" readonly></textarea>
-                            <button class="tg-send-btn">
-                              <svg class="icon" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
+              <ul class="comparison-card__features ids__list-plain">
+                <li class="comparison-card__feature comparison-card__feature--disabled">
+                  <span class="comparison-card__icon comparison-card__icon--cross">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  </span>
+                  AI-саммари недоступно
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--partial">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
+                  </span>
+                  Базовая группировка
+                </li>
+                <li class="comparison-card__feature comparison-card__feature--disabled">
+                  <span class="comparison-card__icon comparison-card__icon--cross">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  </span>
+                  Нет автопересылки
+                </li>
+                <li class="comparison-card__feature comparison-card__feature--disabled">
+                  <span class="comparison-card__icon comparison-card__icon--cross">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  </span>
+                  Требует Premium
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Бесплатно (с ограничениями)
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Clarity Bot (Featured) -->
+            <div class="comparison-card comparison-card--featured">
+              <span class="comparison-card__badge">Рекомендуем</span>
+              <div class="comparison-card__header">
+                <div class="comparison-card__name">Clarity Bot</div>
+                <div class="comparison-card__type">Умный ассистент</div>
               </div>
+              <ul class="comparison-card__features ids__list-plain">
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  AI-саммари каналов
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Умная группировка
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Автопересылка по правилам
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Без Telegram Premium
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Бесплатный тариф навсегда
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Junction Bot -->
+            <div class="comparison-card">
+              <div class="comparison-card__header">
+                <div class="comparison-card__name">Junction Bot</div>
+                <div class="comparison-card__type">Сторонний бот</div>
+              </div>
+              <ul class="comparison-card__features ids__list-plain">
+                <li class="comparison-card__feature comparison-card__feature--disabled">
+                  <span class="comparison-card__icon comparison-card__icon--cross">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  </span>
+                  AI-саммари недоступно
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Группировка каналов
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Автопересылка
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Без Premium
+                </li>
+                <li class="comparison-card__feature comparison-card__feature--disabled">
+                  <span class="comparison-card__icon comparison-card__icon--cross">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  </span>
+                  Только платные тарифы
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -308,11 +485,7 @@
               <ul class="pricing-card__features">
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Безлимитные группы каналов
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Безлимитные AI-саммари
+                  Безлимит на группы и саммари
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -320,10 +493,14 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Приоритетная поддержка 24/7
+                  Приоритет важных сообщений
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Поддержка 24/7
                 </li>
               </ul>
-              <a href="#" class="button button--primary">Выбрать Про</a>
+              <a href="#" class="button button--primary">Начать бесплатно</a>
             </div>
           </div>
         </div>
@@ -331,19 +508,19 @@
       
       <!-- FAQ Section -->
       <section class="faq-section" id="faq">
-        <div class="ids__wrapper L">
+        <div class="ids__wrapper M">
           <div class="section-header">
             <h2 class="section-title">Частые вопросы</h2>
           </div>
           
           <div class="faq-list">
             <details class="faq-item">
-              <summary class="faq-item__question">Как начать пользоваться Clarity Bot?</summary>
+              <summary class="faq-item__question">Как начать пользоваться?</summary>
               <p class="faq-item__answer">Найдите @ClarityBot в Telegram, нажмите «Старт» и следуйте инструкциям. Настройка занимает меньше минуты.</p>
             </details>
             
             <details class="faq-item">
-              <summary class="faq-item__question">Безопасно ли подключать свой аккаунт?</summary>
+              <summary class="faq-item__question">Безопасно ли подключать аккаунт?</summary>
               <p class="faq-item__answer">Да, мы используем официальный Telegram API и не храним ваши сообщения. Бот работает только с теми каналами, которые вы добавите.</p>
             </details>
             
@@ -353,8 +530,8 @@
             </details>
             
             <details class="faq-item">
-              <summary class="faq-item__question">Чем Clarity Bot лучше папок Telegram?</summary>
-              <p class="faq-item__answer">Папки только группируют чаты. Clarity Bot добавляет AI-саммари, умную пересылку и приоритизацию важных сообщений — всё это без Telegram Premium.</p>
+              <summary class="faq-item__question">Чем это лучше папок Telegram?</summary>
+              <p class="faq-item__answer">Папки только группируют чаты. Clarity Bot добавляет AI-саммари, умную пересылку и приоритизацию — всё без Telegram Premium.</p>
             </details>
           </div>
         </div>
@@ -364,9 +541,9 @@
       <section class="cta-section">
         <div class="ids__wrapper L">
           <div class="cta-section__content">
-            <h2 class="cta-section__title">Готовы навести порядок в Telegram?</h2>
-            <p class="cta-section__text">Присоединяйтесь к тысячам пользователей, которые уже экономят время</p>
-            <a href="downloads/app.exe" class="button button--primary">Попробовать бесплатно</a>
+            <h2 class="cta-section__title">Готовы навести порядок?</h2>
+            <p class="cta-section__text">Начните бесплатно — настройка займёт меньше минуты</p>
+            <a href="downloads/app.exe" class="button button--primary">Начать бесплатно</a>
           </div>
         </div>
       </section>
@@ -394,40 +571,352 @@
       </div>
     </footer>
     <script>
-      // Mobile menu toggle
-      const burger = document.querySelector('.header__burger');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      const closeBtn = document.querySelector('.mobile-menu__close');
-      const body = document.body;
-      
-      function openMenu() {
-        mobileMenu.classList.add('mobile-menu--active');
-        burger.classList.add('header__burger--active');
-        body.style.overflow = 'hidden';
+      // ═══════════════════════════════════════════════════════════
+      // DATA
+      // ═══════════════════════════════════════════════════════════
+
+      const CHATS = [
+        {
+          id: 'design',
+          name: '🎨 Дизайн',
+          avatar: { letter: 'Д', color: 'violet' },
+          subtitle: '12 каналов',
+          preview: 'Дизайн Кабак: Новый тренд в UI — неоморфизм возвращается...',
+          time: '14:32',
+          unread: 24,
+          messages: [
+            { type: 'date', text: 'Сегодня' },
+            { 
+              from: 'Дизайн Кабак', 
+              text: 'Новый тренд в UI — неоморфизм возвращается, но уже в более сдержанной форме. Мягкие тени, минимум градиентов.',
+              time: '12:15',
+              avatar: { letter: 'ДК', color: 'violet' }
+            },
+            { 
+              from: 'Awdee', 
+              text: 'Figma выкатила обновление: Auto Layout стал ещё умнее. Теперь можно задавать min/max width прямо в свойствах.',
+              time: '12:47',
+              avatar: { letter: 'A', color: 'blue' }
+            },
+            { 
+              from: 'Design & Productivity', 
+              text: '5 расширений для Figma, которые сэкономят вам часы работы:\n\n1. Stark — проверка контрастности\n2. Content Reel — генерация контента\n3. Autoflow — стрелки и флоу\n4. Unsplash — фото прямо в макет\n5. Iconify — 100k+ иконок',
+              time: '13:22',
+              avatar: { letter: 'D', color: 'green' }
+            },
+            { 
+              from: 'Дизайн Кабак', 
+              text: 'Вакансия: Senior Product Designer в Яндекс. Удалёнка, от 400к. Кто хочет — пишите в личку.',
+              time: '14:01',
+              avatar: { letter: 'ДК', color: 'violet' }
+            },
+            { 
+              from: 'UX Notes', 
+              text: 'Почему пользователи не читают ваши тексты?\n\nПотому что вы пишете для себя, а не для них. F-паттерн никто не отменял.',
+              time: '14:32',
+              avatar: { letter: 'UX', color: 'orange' }
+            },
+          ]
+        },
+        {
+          id: 'ai',
+          name: '🤖 AI & ML',
+          avatar: { letter: 'AI', color: 'blue' },
+          subtitle: '8 каналов',
+          preview: 'AI News: OpenAI анонсировала GPT-5...',
+          time: '14:28',
+          unread: 12,
+          messages: [
+            { type: 'date', text: 'Сегодня' },
+            { 
+              from: 'AI News', 
+              text: 'OpenAI анонсировала GPT-5. Главное:\n\n• Контекст 1M токенов\n• Мультимодальность из коробки\n• Reasoning на уровне PhD\n• Цена x2 от GPT-4',
+              time: '11:45',
+              avatar: { letter: 'AI', color: 'green' }
+            },
+            { 
+              from: 'Машинное обучение', 
+              text: 'Anthropic выложили исследование по интерпретируемости Claude. Оказывается, модель реально "думает" — есть внутренние цепочки рассуждений.',
+              time: '12:30',
+              avatar: { letter: 'ML', color: 'cyan' }
+            },
+            { 
+              from: 'Нейросети для всех', 
+              text: 'Midjourney v7 — первые примеры. Фотореализм вышел на новый уровень. Руки наконец-то нормальные 🙌',
+              time: '13:15',
+              avatar: { letter: 'Н', color: 'pink' }
+            },
+            { 
+              from: 'AI News', 
+              text: 'Google DeepMind показали AlphaFold 3. Теперь предсказывает не только белки, но и взаимодействие с лекарствами.',
+              time: '14:28',
+              avatar: { letter: 'AI', color: 'green' }
+            },
+          ]
+        },
+        {
+          id: 'marketing',
+          name: '📈 Маркетинг',
+          avatar: { letter: 'М', color: 'orange' },
+          subtitle: '15 каналов',
+          preview: 'Маркетинг и PR: Кейс: как мы увеличили конверсию...',
+          time: '13:55',
+          unread: 0,
+          messages: [
+            { type: 'date', text: 'Сегодня' },
+            { 
+              from: 'Маркетинг и PR', 
+              text: 'Кейс: как мы увеличили конверсию лендинга с 2% до 8%.\n\nСпойлер: убрали 70% текста и добавили видео-демо продукта.',
+              time: '10:20',
+              avatar: { letter: 'PR', color: 'orange' }
+            },
+            { 
+              from: 'Growth Hacks', 
+              text: 'Telegram Ads теперь доступны для всех. Минимальный бюджет — €500. CPM от €2.',
+              time: '11:45',
+              avatar: { letter: 'GH', color: 'green' }
+            },
+            { 
+              from: 'Контент-маркетинг', 
+              text: 'SEO в 2025: Google официально подтвердил — поведенческие факторы важнее ссылок. Время на сайте и глубина просмотра решают.',
+              time: '13:55',
+              avatar: { letter: 'К', color: 'blue' }
+            },
+          ]
+        },
+        {
+          id: 'crypto',
+          name: '💰 Крипта',
+          avatar: { letter: '₿', color: 'orange' },
+          subtitle: '6 каналов',
+          preview: 'Crypto Daily: BTC пробил $100k...',
+          time: '13:40',
+          unread: 5,
+          messages: [
+            { type: 'date', text: 'Сегодня' },
+            { 
+              from: 'Crypto Daily', 
+              text: '🚀 BTC пробил $100k!\n\nИсторический момент. ETF-ы залили $2B за день.',
+              time: '09:30',
+              avatar: { letter: '₿', color: 'orange' }
+            },
+            { 
+              from: 'DeFi Insights', 
+              text: 'Новый L2 от Coinbase показывает TPS 10,000. Комиссии меньше цента. Ethereum киллер? Вряд ли, но интересно.',
+              time: '11:20',
+              avatar: { letter: 'D', color: 'blue' }
+            },
+            { 
+              from: 'Crypto Daily', 
+              text: 'SEC одобрила Ethereum ETF. Цена +15% за час.',
+              time: '13:40',
+              avatar: { letter: '₿', color: 'orange' }
+            },
+          ]
+        },
+        {
+          id: 'dev',
+          name: '👨‍💻 Разработка',
+          avatar: { letter: '<>', color: 'green' },
+          subtitle: '10 каналов',
+          preview: 'Frontend Daily: React 19 — что нового...',
+          time: '12:50',
+          unread: 0,
+          messages: [
+            { type: 'date', text: 'Сегодня' },
+            { 
+              from: 'Frontend Daily', 
+              text: 'React 19 — что нового:\n\n• use() хук для промисов\n• Улучшенный Suspense\n• Автоматический батчинг\n• Новый компилятор',
+              time: '10:15',
+              avatar: { letter: 'FE', color: 'cyan' }
+            },
+            { 
+              from: 'Backend News', 
+              text: 'Bun 2.0 вышел. Теперь полностью совместим с Node.js. Скорость — x3.',
+              time: '11:30',
+              avatar: { letter: 'BE', color: 'green' }
+            },
+            { 
+              from: 'DevOps Weekly', 
+              text: 'Docker Desktop теперь бесплатный для команд до 250 человек. Наконец-то.',
+              time: '12:50',
+              avatar: { letter: 'DO', color: 'blue' }
+            },
+          ]
+        },
+        {
+          id: 'news',
+          name: '📰 Новости',
+          avatar: { letter: 'Н', color: 'red' },
+          subtitle: '5 каналов',
+          preview: 'Новости IT: Apple представила Vision Pro 2...',
+          time: '11:20',
+          unread: 3,
+          messages: [
+            { type: 'date', text: 'Сегодня' },
+            { 
+              from: 'Новости IT', 
+              text: 'Apple представила Vision Pro 2:\n\n• Вес уменьшен на 40%\n• Цена $2,499\n• Батарея 4 часа\n• Совместимость с Mac',
+              time: '10:00',
+              avatar: { letter: 'IT', color: 'red' }
+            },
+            { 
+              from: 'Tech Insider', 
+              text: 'Илон Маск купил ещё одну компанию. На этот раз — производителя чипов для AI.',
+              time: '11:20',
+              avatar: { letter: 'TI', color: 'blue' }
+            },
+          ]
+        },
+      ];
+
+      // ═══════════════════════════════════════════════════════════
+      // RENDER FUNCTIONS
+      // ═══════════════════════════════════════════════════════════
+
+      function renderChatList() {
+        const container = document.getElementById('chatList');
+        container.innerHTML = CHATS.map(chat => `
+          <div class="tg-chat-item" data-chat-id="${chat.id}" onclick="openChat('${chat.id}')">
+            <div class="tg-avatar ${chat.avatar.color}">${chat.avatar.letter}</div>
+            <div class="tg-chat-info">
+              <div class="tg-chat-top">
+                <span class="tg-chat-name">${chat.name}</span>
+                <span class="tg-chat-time">${chat.time}</span>
+              </div>
+              <div class="tg-chat-bottom">
+                <span class="tg-chat-preview">${chat.preview}</span>
+                ${chat.unread ? `<span class="tg-badge">${chat.unread}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        `).join('');
       }
-      
-      function closeMenu() {
-        mobileMenu.classList.remove('mobile-menu--active');
-        burger.classList.remove('header__burger--active');
-        body.style.overflow = '';
+
+      function renderMessages(chatId) {
+        const chat = CHATS.find(c => c.id === chatId);
+        if (!chat) return;
+        
+        const container = document.getElementById('messagesInner');
+        container.innerHTML = chat.messages.map(msg => {
+          if (msg.type === 'date') {
+            return `
+              <div class="tg-date-separator">
+                <span>${msg.text}</span>
+              </div>
+            `;
+          }
+          
+          return `
+            <div class="tg-message incoming">
+              <div class="tg-message-avatar">
+                <div class="tg-avatar small ${msg.avatar.color}">${msg.avatar.letter}</div>
+              </div>
+              <div class="tg-bubble">
+                <div class="tg-forwarded">
+                  <svg class="icon small" viewBox="0 0 24 24"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/></svg>
+                  <span class="tg-channel-name">${msg.from}</span>
+                </div>
+                <div class="tg-message-text">${msg.text}</div>
+                <div class="tg-message-meta">
+                  <span class="tg-message-time">${msg.time}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+        
+        // Scroll to bottom
+        const messagesArea = document.getElementById('messagesArea');
+        messagesArea.scrollTop = messagesArea.scrollHeight;
       }
-      
-      burger.addEventListener('click', function() {
-        if (mobileMenu.classList.contains('mobile-menu--active')) {
-          closeMenu();
-        } else {
-          openMenu();
-        }
-      });
-      
-      closeBtn.addEventListener('click', closeMenu);
-      
-      // Close menu when clicking on a link
-      const mobileLinks = document.querySelectorAll('.mobile-menu__list a');
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
+
+      // ═══════════════════════════════════════════════════════════
+      // INTERACTION
+      // ═══════════════════════════════════════════════════════════
+
+      let currentChatId = null;
+
+      function openChat(chatId) {
+        const chat = CHATS.find(c => c.id === chatId);
+        if (!chat) return;
+        
+        currentChatId = chatId;
+        
+        // Update active state
+        document.querySelectorAll('.tg-chat-item').forEach(el => {
+          el.classList.toggle('active', el.dataset.chatId === chatId);
+        });
+        
+        // Update header
+        document.getElementById('headerAvatar').className = `tg-avatar small ${chat.avatar.color}`;
+        document.getElementById('headerAvatar').textContent = chat.avatar.letter;
+        document.getElementById('headerTitle').textContent = chat.name;
+        document.getElementById('headerSubtitle').textContent = chat.subtitle;
+        
+        // Show chat UI
+        document.getElementById('chatHeader').style.display = 'flex';
+        document.getElementById('messagesArea').style.display = 'flex';
+        document.getElementById('inputArea').style.display = 'block';
+        
+        // Render messages
+        renderMessages(chatId);
+        
+        // Mobile: show chat
+        document.getElementById('app').classList.add('chat-open');
+        
+        // Start smooth animation
+        setTimeout(() => animateMessagesIn(), 100);
+      }
+
+      function closeChat() {
+        document.getElementById('app').classList.remove('chat-open');
+        
+        // Hide chat elements
+        document.getElementById('chatHeader').style.display = 'none';
+        document.getElementById('messagesArea').style.display = 'none';
+        document.getElementById('inputArea').style.display = 'none';
+        
+        // Clear active state
+        document.querySelectorAll('.tg-chat-item').forEach(el => el.classList.remove('active'));
+      }
+
+      // ═══════════════════════════════════════════════════════════
+      // ANIMATION - Smooth message appearance
+      // ═══════════════════════════════════════════════════════════
+
+      function animateMessagesIn() {
+        const messagesArea = document.getElementById('messagesArea');
+        const items = messagesArea.querySelectorAll('.tg-message, .tg-date-separator');
+        
+        // Reset all items
+        items.forEach(item => {
+          item.classList.remove('animate-in');
+        });
+        
+        // Scroll to top first
+        messagesArea.scrollTop = 0;
+        
+        // Animate each item with 2 second delay between them
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('animate-in');
+            // Smooth scroll to keep new messages visible
+            messagesArea.scrollTo({
+              top: messagesArea.scrollHeight,
+              behavior: 'smooth'
+            });
+          }, index * 2000); // Эффект постепенного появления
+        });
+      }
+
+      // ═══════════════════════════════════════════════════════════
+      // INIT
+      // ═══════════════════════════════════════════════════════════
+
+      document.addEventListener('DOMContentLoaded', () => {
+        renderChatList();
       });
     </script>
-    <script src="js/telegram-demo.js"></script>
   </body>
 </html>
