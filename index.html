@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <title>Clarity Bot</title>
+    <meta name="description" content="Clarity Bot — AI-саммари, умная группировка и автопересылка в Telegram" />
     <link rel="icon" type="image/svg+xml" href="images/gallery/123.svg" />
     <link rel="shortcut icon" type="image/svg+xml" href="images/gallery/123.svg" />
     <link rel="apple-touch-icon" href="images/gallery/123.svg" />
@@ -36,7 +37,7 @@
     
           <a class="header__button" href="downloads/app.exe">Попробовать</a>
           
-          <button class="header__burger" aria-label="Меню">
+          <button class="header__burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
             <span></span>
             <span></span>
             <span></span>
@@ -45,7 +46,7 @@
       </div>
     </header>
     
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobileMenu" role="navigation">
       <button class="mobile-menu__close" aria-label="Закрыть меню">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="18" y1="6" x2="6" y2="18"/>
@@ -918,5 +919,6 @@
         renderChatList();
       });
     </script>
+    <script defer src="js/header-menu.js"></script>
   </body>
 </html>
