@@ -63,14 +63,37 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="ids__wrapper M">
-          <h1>Порядок в Telegram<br>за 5 минут</h1>
-          <p>AI-саммари каналов, умная группировка и автопересылка — без Telegram Premium</p>
+          <h1>Превратите 25+ каналов<br>в 5 чистых лент</h1>
+          <p>Конвертируйте хаос из папок в единые тематические потоки. Вы читаете одну ленту — Clarity Bot собирает в неё посты из десятков источников.</p>
           <div class="hero__buttons">
-            <a class="button button--primary" href="downloads/app.exe">Начать бесплатно</a>
-            <a class="button button--secondary" href="#how-it-works">Узнать больше</a>
+            <a class="button button--primary" href="downloads/app.exe">Попробовать бесплатно</a>
+            <a class="button button--secondary" href="#how-it-works">Принцип работы</a>
           </div>
         </div>
       </section>
+
+      <!-- Social Proof Ticker -->
+      <div class="ticker-section">
+        <div class="ticker-wrapper">
+          <div class="ticker-track">
+            <span class="ticker-item">Дизайн</span>
+            <span class="ticker-item">Новости</span>
+            <span class="ticker-item">Крипта</span>
+            <span class="ticker-item">IT</span>
+            <span class="ticker-item">Стартапы</span>
+            <span class="ticker-item">Маркетинг</span>
+            <span class="ticker-item">Финансы</span>
+            <!-- Duplicate for loop -->
+            <span class="ticker-item">Дизайн</span>
+            <span class="ticker-item">Новости</span>
+            <span class="ticker-item">Крипта</span>
+            <span class="ticker-item">IT</span>
+            <span class="ticker-item">Стартапы</span>
+            <span class="ticker-item">Маркетинг</span>
+            <span class="ticker-item">Финансы</span>
+          </div>
+        </div>
+      </div>
       
       <!-- Product Demo Section -->
       <section class="demo-section" id="demo">
@@ -78,9 +101,9 @@
           <div class="demo-layout">
             <!-- Left Column: Content -->
             <div class="demo-content">
-              <h2 class="demo-title">Работает там, где<br>вы общаетесь</h2>
+              <h2 class="demo-title">Ваша личная<br>медиа-система</h2>
               <p class="demo-description">
-                Забудьте о переключении между приложениями. Clarity Bot встраивается в ваш Telegram и ощущается как нативная часть мессенджера.
+                Перестаньте кликать по папкам и проверять красные точки. Clarity Bot работает как маршрутизатор: он забирает контент из выбранных источников и пересылает его в ваш личный канал-агрегатор.
               </p>
               
               <ul class="demo-features-list">
@@ -89,17 +112,17 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                   </div>
                   <div class="demo-feature__text">
-                    <strong>Безопасно по умолчанию</strong>
-                    <span>Работает через официальный API без доступа к личным перепискам</span>
+                    <strong>Полный контроль</strong>
+                    <span>Вы сами решаете, какие каналы объединить в одну ленту</span>
                   </div>
                 </li>
                 <li class="demo-feature">
                   <div class="demo-feature__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                   </div>
                   <div class="demo-feature__text">
-                    <strong>Мгновенный отклик</strong>
-                    <span>Никаких долгих загрузок — бот отвечает за миллисекунды</span>
+                    <strong>Единая лента</strong>
+                    <span>Вместо 20 чатов — один. Читайте потоком, как в Twitter или RSS</span>
                   </div>
                 </li>
               </ul>
@@ -144,10 +167,10 @@
                         <button class="tg-back-btn" onclick="closeChat()" style="display: flex;">
                           <svg class="icon" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                         </button>
-                        <div class="tg-avatar small blue" id="headerAvatar">Д</div>
+                        <div class="tg-avatar small blue" id="headerAvatar">Н</div>
                         <div class="tg-header-info">
-                          <div class="tg-header-title" id="headerTitle">Дизайн</div>
-                          <div class="tg-header-subtitle" id="headerSubtitle">12 каналов</div>
+                          <div class="tg-header-title" id="headerTitle">Новости (Лента)</div>
+                          <div class="tg-header-subtitle" id="headerSubtitle">Агрегатор</div>
                         </div>
                         <div class="tg-header-actions">
                           <button class="tg-icon-btn">
@@ -189,48 +212,80 @@
       <section class="features-section" id="features">
         <div class="ids__wrapper M">
           <div class="section-header">
-            <h2 class="section-title">Что умеет Clarity Bot</h2>
-            <p class="section-subtitle">Три ключевые функции для продуктивной работы с Telegram</p>
+            <h2 class="section-title">Структура вместо потока</h2>
+            <p class="section-subtitle">Выстраивайте архитектуру потребления контента</p>
           </div>
           
           <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                  <path d="M8 10h8M8 14h4"/>
-                </svg>
+            <!-- Feature 1: Aggregation -->
+            <div class="feature-card feature-card--summary">
+              <div class="feature-visual">
+                <div class="aggregation-visual">
+                  <div class="agg-sources">
+                    <div class="agg-source"></div>
+                    <div class="agg-source"></div>
+                    <div class="agg-source"></div>
+                  </div>
+                  <div class="agg-arrow">
+                    <div class="agg-line"></div>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18l6-6-6-6"/></svg>
+                  </div>
+                  <div class="agg-feed">
+                    <div class="agg-feed-item"></div>
+                    <div class="agg-feed-item"></div>
+                  </div>
+                </div>
               </div>
               <div class="feature-card__body">
-                <h3 class="feature-card__title">AI-саммари</h3>
-                <p class="feature-card__text">Краткая выжимка из сотен сообщений за секунды</p>
+                <h3 class="feature-card__title">Единая лента</h3>
+                <p class="feature-card__text">Объедините 10-20 источников одной тематики в один канал. Читайте всё в одном месте.</p>
               </div>
             </div>
             
-            <div class="feature-card">
-              <div class="feature-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-                </svg>
+            <!-- Feature 2: No Noise -->
+            <div class="feature-card feature-card--groups">
+              <div class="feature-visual">
+                <div class="noise-visual">
+                   <div class="noise-stack">
+                     <div class="noise-dot red"></div>
+                     <div class="noise-dot red"></div>
+                     <div class="noise-dot red"></div>
+                   </div>
+                   <div class="noise-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                   </div>
+                   <div class="noise-clean">
+                     <div class="noise-check">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                     </div>
+                   </div>
+                </div>
               </div>
               <div class="feature-card__body">
-                <h3 class="feature-card__title">Умные группы</h3>
-                <p class="feature-card__text">Объединяйте каналы по темам и читайте в одном месте</p>
+                <h3 class="feature-card__title">Ноль лишних кликов</h3>
+                <p class="feature-card__text">Забудьте о проверке красных точек в каждой папке. Заходите в Telegram, чтобы читать, а не переключаться.</p>
               </div>
             </div>
             
-            <div class="feature-card">
-              <div class="feature-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 1l4 4-4 4"/>
-                  <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
-                  <path d="M7 23l-4-4 4-4"/>
-                  <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
-                </svg>
+            <!-- Feature 3: Routing -->
+            <div class="feature-card feature-card--forward">
+              <div class="feature-visual">
+                <div class="forward-visual">
+                  <div class="msg-card msg-card--source">
+                    <div class="skeleton-line w-70"></div>
+                  </div>
+                  <div class="forward-path">
+                    <div class="forward-line"></div>
+                    <div class="forward-status">#Tech</div>
+                  </div>
+                  <div class="msg-card msg-card--dest">
+                    <div class="skeleton-line w-70"></div>
+                  </div>
+                </div>
               </div>
               <div class="feature-card__body">
-                <h3 class="feature-card__title">Автопересылка</h3>
-                <p class="feature-card__text">Бот сам перешлёт важное в нужный чат по правилам</p>
+                <h3 class="feature-card__title">Гибкая маршрутизация</h3>
+                <p class="feature-card__text">Настройте, куда именно пересылать посты: в личку, в «Избранное» или в приватные каналы.</p>
               </div>
             </div>
           </div>
@@ -241,8 +296,8 @@
       <section class="how-it-works-section" id="how-it-works">
         <div class="ids__wrapper M">
           <div class="section-header">
-            <h2 class="section-title">Начните за 3 шага</h2>
-            <p class="section-subtitle">Простая настройка, мощный результат</p>
+            <h2 class="section-title">Система за 3 шага</h2>
+            <p class="section-subtitle">Один раз настроили — пользуетесь постоянно</p>
           </div>
           
           <div class="timeline">
@@ -250,13 +305,8 @@
             <div class="timeline-item">
               <div class="timeline-content">
                 <div class="timeline-number">01</div>
-                <h3 class="timeline-title">Подключите бота</h3>
-                <p class="timeline-text">Найдите @ClarityBot в Telegram и нажмите «Старт». Никаких регистраций на сайтах и сложных паролей.</p>
-              </div>
-              <div class="timeline-visual">
-                <div class="visual-start-btn">
-                  <span>Start</span>
-                </div>
+                <h3 class="timeline-title">Создайте канал</h3>
+                <p class="timeline-text">Создайте пустой приватный канал в Telegram (например, «Мои Новости»). Это будет ваша новая лента.</p>
               </div>
             </div>
             
@@ -264,15 +314,8 @@
             <div class="timeline-item reverse">
               <div class="timeline-content">
                 <div class="timeline-number">02</div>
-                <h3 class="timeline-title">Настройте ленту</h3>
-                <p class="timeline-text">Создайте группы для каналов (например, «Новости», «Дизайн») и добавьте в них источники. Бот сам подскажет.</p>
-              </div>
-              <div class="timeline-visual">
-                <div class="visual-toggles">
-                  <div class="visual-toggle active"></div>
-                  <div class="visual-toggle"></div>
-                  <div class="visual-toggle active"></div>
-                </div>
+                <h3 class="timeline-title">Добавьте бота</h3>
+                <p class="timeline-text">Добавьте Clarity Bot администратором в этот канал, чтобы он мог публиковать туда сообщения.</p>
               </div>
             </div>
             
@@ -280,15 +323,8 @@
             <div class="timeline-item">
               <div class="timeline-content">
                 <div class="timeline-number">03</div>
-                <h3 class="timeline-title">Получайте главное</h3>
-                <p class="timeline-text">Каждое утро (или когда удобно) вы будете получать сжатую выжимку самого важного. Экономьте часы чтения.</p>
-              </div>
-              <div class="timeline-visual">
-                <div class="visual-message">
-                  <div class="visual-message-line w-70"></div>
-                  <div class="visual-message-line w-50"></div>
-                  <div class="visual-message-line w-40"></div>
-                </div>
+                <h3 class="timeline-title">Перешлите источники</h3>
+                <p class="timeline-text">Просто перешлите боту сообщения из каналов-источников, и он начнет транслировать их в вашу ленту.</p>
               </div>
             </div>
           </div>
@@ -299,8 +335,8 @@
       <section class="comparison-section" id="comparison">
         <div class="ids__wrapper M">
           <div class="section-header">
-            <h2 class="section-title">Почему выбирают нас</h2>
-            <p class="section-subtitle">Сравните возможности и выберите лучшее решение</p>
+            <h2 class="section-title">Порядок бьёт Хаос</h2>
+            <p class="section-subtitle">Разница в подходе к потреблению информации</p>
           </div>
           
           <div class="comparison-cards">
@@ -308,161 +344,145 @@
             <div class="comparison-card">
               <div class="comparison-card__header">
                 <div class="comparison-card__name">Папки Telegram</div>
-                <div class="comparison-card__type">Встроенная функция</div>
+                <div class="comparison-card__type">Стандартный подход</div>
               </div>
               <ul class="comparison-card__features ids__list-plain">
                 <li class="comparison-card__feature comparison-card__feature--disabled">
                   <span class="comparison-card__icon comparison-card__icon--cross">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
                   </span>
-                  AI-саммари недоступно
-                </li>
-                <li class="comparison-card__feature">
-                  <span class="comparison-card__icon comparison-card__icon--partial">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg>
-                  </span>
-                  Базовая группировка
+                  25+ чатов для проверки
                 </li>
                 <li class="comparison-card__feature comparison-card__feature--disabled">
                   <span class="comparison-card__icon comparison-card__icon--cross">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
                   </span>
-                  Нет автопересылки
+                  Сотни красных уведомлений
                 </li>
                 <li class="comparison-card__feature comparison-card__feature--disabled">
                   <span class="comparison-card__icon comparison-card__icon--cross">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
                   </span>
-                  Требует Premium
+                  Постоянное переключение
                 </li>
-                <li class="comparison-card__feature">
-                  <span class="comparison-card__icon comparison-card__icon--check">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <li class="comparison-card__feature comparison-card__feature--disabled">
+                  <span class="comparison-card__icon comparison-card__icon--cross">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
                   </span>
-                  Бесплатно (с ограничениями)
+                  Смешанный контент
                 </li>
               </ul>
             </div>
             
             <!-- Clarity Bot (Featured) -->
             <div class="comparison-card comparison-card--featured">
-              <span class="comparison-card__badge">Рекомендуем</span>
+              <span class="comparison-card__badge">Эффективность</span>
               <div class="comparison-card__header">
                 <div class="comparison-card__name">Clarity Bot</div>
-                <div class="comparison-card__type">Умный ассистент</div>
+                <div class="comparison-card__type">Системный подход</div>
               </div>
               <ul class="comparison-card__features ids__list-plain">
                 <li class="comparison-card__feature">
                   <span class="comparison-card__icon comparison-card__icon--check">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  AI-саммари каналов
+                  5 лент вместо 25 чатов
                 </li>
                 <li class="comparison-card__feature">
                   <span class="comparison-card__icon comparison-card__icon--check">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  Умная группировка
+                  Ноль лишних уведомлений
                 </li>
                 <li class="comparison-card__feature">
                   <span class="comparison-card__icon comparison-card__icon--check">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  Автопересылка по правилам
+                  Одна лента — одна тема
                 </li>
                 <li class="comparison-card__feature">
                   <span class="comparison-card__icon comparison-card__icon--check">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  Без Telegram Premium
+                  Чистый поток чтения
                 </li>
                 <li class="comparison-card__feature">
                   <span class="comparison-card__icon comparison-card__icon--check">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  Бесплатный тариф навсегда
+                  Работает автоматически
                 </li>
               </ul>
             </div>
             
-            <!-- Junction Bot -->
+            <!-- Manual Forwarding -->
             <div class="comparison-card">
               <div class="comparison-card__header">
-                <div class="comparison-card__name">Junction Bot</div>
-                <div class="comparison-card__type">Сторонний бот</div>
+                <div class="comparison-card__name">Ручной режим</div>
+                <div class="comparison-card__type">Без автоматизации</div>
               </div>
               <ul class="comparison-card__features ids__list-plain">
                 <li class="comparison-card__feature comparison-card__feature--disabled">
                   <span class="comparison-card__icon comparison-card__icon--cross">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
                   </span>
-                  AI-саммари недоступно
-                </li>
-                <li class="comparison-card__feature">
-                  <span class="comparison-card__icon comparison-card__icon--check">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  Группировка каналов
-                </li>
-                <li class="comparison-card__feature">
-                  <span class="comparison-card__icon comparison-card__icon--check">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  Автопересылка
-                </li>
-                <li class="comparison-card__feature">
-                  <span class="comparison-card__icon comparison-card__icon--check">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  Без Premium
+                  Долго пересылать
                 </li>
                 <li class="comparison-card__feature comparison-card__feature--disabled">
                   <span class="comparison-card__icon comparison-card__icon--cross">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
                   </span>
-                  Только платные тарифы
+                  Нет автообновления
+                </li>
+                <li class="comparison-card__feature">
+                  <span class="comparison-card__icon comparison-card__icon--check">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Бесплатно
+                </li>
+                <li class="comparison-card__feature comparison-card__feature--disabled">
+                  <span class="comparison-card__icon comparison-card__icon--cross">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  </span>
+                  Требует много времени
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      
+
       <!-- Pricing Section -->
       <section class="pricing-section" id="pricing">
         <div class="ids__wrapper M">
           <div class="section-header">
             <h2 class="section-title">Тарифы</h2>
-            <p class="section-subtitle">Начните бесплатно, масштабируйтесь по мере роста</p>
+            <p class="section-subtitle">Платите за удобство, а не за воздух</p>
           </div>
           
           <div class="pricing-cards">
             <!-- Free Plan -->
             <div class="pricing-card">
               <div class="pricing-card__header">
-                <span class="pricing-card__name">Бесплатный</span>
+                <span class="pricing-card__name">Старт</span>
                 <div class="pricing-card__price">
                   <span class="pricing-card__amount">0 ₽</span>
                   <span class="pricing-card__period">навсегда</span>
                 </div>
-                <p class="pricing-card__description">Для знакомства с продуктом</p>
+                <p class="pricing-card__description">Для небольшого порядка</p>
               </div>
               <ul class="pricing-card__features">
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  До 3 групп каналов
+                  До 5 каналов-источников
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  10 AI-саммари в день
+                  1 целевой канал (Лента)
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Базовая пересылка сообщений
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Поддержка через бота
+                  Моментальная пересылка
                 </li>
               </ul>
               <a href="#" class="button button--secondary">Начать бесплатно</a>
@@ -470,34 +490,34 @@
             
             <!-- Pro Plan -->
             <div class="pricing-card pricing-card--featured">
-              <div class="pricing-card__badge">Популярный</div>
+              <div class="pricing-card__badge">Выбор Power User</div>
               <div class="pricing-card__header">
-                <span class="pricing-card__name">Про</span>
+                <span class="pricing-card__name">Система</span>
                 <div class="pricing-card__price">
                   <span class="pricing-card__amount">499 ₽</span>
                   <span class="pricing-card__period">/ месяц</span>
                 </div>
-                <p class="pricing-card__description">Для активных пользователей</p>
+                <p class="pricing-card__description">Для тотального контроля</p>
               </div>
               <ul class="pricing-card__features">
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Безлимит на группы и саммари
+                  До 100 каналов-источников
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Продвинутые правила пересылки
+                  Безлимитные целевые ленты
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Приоритет важных сообщений
+                  Гибкая фильтрация (White/Black list)
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Поддержка 24/7
+                  Приоритетная поддержка
                 </li>
               </ul>
-              <a href="#" class="button button--primary">Начать бесплатно</a>
+              <a href="#" class="button button--primary">Подключить Pro</a>
             </div>
           </div>
         </div>
