@@ -3,8 +3,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: transparent;
-    backdrop-filter: saturate(180%) blur(10px);
+    background: #ffffff;
+    /* backdrop-filter removed for solid white match */
     transition: box-shadow 0.2s ease;
 }
 
