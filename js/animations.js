@@ -28,7 +28,7 @@
   // COUNTER ANIMATION
   // ═══════════════════════════════════════════════════════════
   
-  function animateCounter(element, target, suffix, duration = 1200) {
+  function animateCounter(element, target, suffix, duration = 800) {
     const start = 0;
     const startTime = performance.now();
     
@@ -36,9 +36,8 @@
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       
-      // Easing: ease-out for smoother finish
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(start + (target - start) * eased);
+      // Linear easing — constant speed, no slowdown at end
+      const current = Math.floor(start + (target - start) * progress);
       
       // Always show suffix together with number
       element.textContent = current.toLocaleString('ru-RU') + ' ' + suffix;

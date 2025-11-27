@@ -4,7 +4,6 @@
     top: 0;
     z-index: 100;
     background: #ffffff;
-    /* backdrop-filter removed for solid white match */
     transition: box-shadow 0.2s ease;
 }
 
@@ -18,16 +17,16 @@
     }
 } 
 .header__logo-image {
-    height: 32px;
+    height: var(--space-8);
     width: auto;
     margin-right: var(--space-2);
-    border-radius: 4px;
+    border-radius: var(--space-1);
     display: inline-block;
 }
 .header {
     display: flex;
     align-items: center;
-    padding: var(--space-3) 0; /* компактный хедер */
+    padding: var(--space-2) 0;
 }
 
 .header__button {
@@ -37,10 +36,10 @@
     background-color: rgb(var(--ids__link-RGB));
     color: #fff !important;
     list-style: none !important;
-    padding: var(--space-3) var(--space-6);
+    padding: var(--space-2) var(--space-4);
     text-decoration: none !important;
-    font-size: var(--text-sm);
-    border-radius: 12px;
+    font-size: var(--text-xs);
+    border-radius: 8px;
     font-weight: 600;
     transition: background-color 0.2s ease;
     &:hover {
@@ -96,12 +95,14 @@
     line-height: 1;
     text-decoration: none !important;
     margin: 0 !important;
-    padding: 2px 0 !important; /* почти без вертикальных отступов вокруг текста */
+    padding: 2px 0 !important;
     list-style: none;
     position: static !important;
     color: rgb(var(--ids__text-RGB)) !important;
+    transition: color 0.4s ease;
     &:hover {
-        text-decoration: underline !important;
+        color: rgb(var(--ids__link-RGB)) !important;
+        transition: color 0s;
     }
   }
 
@@ -162,7 +163,7 @@
     cursor: pointer;
     padding: 0;
     margin-left: var(--space-3);
-    gap: 6px;
+    gap: var(--space-2);
 }
 
 .header__burger span {
@@ -255,6 +256,6 @@
     }
     
     .header__logo-image {
-        height: 28px;
+        height: var(--space-6);
     }
 }
