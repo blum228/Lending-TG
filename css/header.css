@@ -28,7 +28,7 @@
 .header {
     display: flex;
     align-items: center; /* вертикальное выравнивание всех элементов */
-    padding: 8px 0; /* симметричные вертикальные отступы */
+    padding: 0; /* без дополнительных вертикальных отступов вокруг лого */
 }
 
 .header__button {
@@ -38,9 +38,9 @@
     background-color: rgb(var(--ids__link-RGB));
     color: #fff !important;
     list-style: none !important;
-    padding: 10px 20px;
+    padding: 10px 22px; /* больше паддинги для более крупной кнопки */
     text-decoration: none !important;
-    font-size: 0.9em !important;
+    font-size: 1em !important; /* чуть крупнее текст */
     border-radius: 400px;
     font-weight: 600;
     &:hover {
@@ -96,7 +96,7 @@
     line-height: 1;
     text-decoration: none !important;
     margin: 0 !important;
-    padding: 8px 0 !important; /* такой же вертикальный padding как у кнопки */
+    padding: 2px 0 !important; /* почти без вертикальных отступов вокруг текста */
     list-style: none;
     position: static !important;
     color: rgb(var(--ids__text-RGB)) !important;
