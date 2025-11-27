@@ -96,70 +96,113 @@
    ============================================ */
 
 .hero-section {
-  padding: calc(var(--ids__density) * 5em) 0 calc(var(--ids__density) * 4em);
-  text-align: center;
+  padding: calc(var(--ids__density) * 4em) 0 calc(var(--ids__density) * 3em);
   background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(101, 122, 218, 0.08) 0%, transparent 60%);
 }
 
+.hero-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+  align-items: center;
+}
+
 .hero-section__content {
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .hero-section__title {
-  font-size: 1.9em;
+  font-size: 2.2em;
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.6em;
   color: rgb(var(--ids__text-RGB));
   letter-spacing: -0.025em;
 }
 
 .hero-section__subtitle {
-  display: none;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: rgba(var(--ids__text-RGB), 0.6);
+  margin: 0 0 1.5em 0;
+  max-width: 480px;
 }
 
 .hero-section__cta {
   display: flex;
-  justify-content: center;
   gap: 1em;
-  margin-top: 2em;
+}
+
+.hero-section__demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Scale down phone in hero */
+.hero-section__demo .telegram-demo-wrapper {
+  padding: 0;
+}
+
+.hero-section__demo .phone-frame {
+  transform: scale(0.75);
+  transform-origin: center center;
+}
+
+/* Mobile: phone on top, text below */
+@media (max-width: 900px) {
+  .hero-section__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+    text-align: center;
+  }
+  
+  .hero-section__demo {
+    order: -1; /* Phone goes first on mobile */
+  }
+  
+  .hero-section__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-section__cta {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 767px) {
   .hero-section {
-    padding: calc(var(--ids__density) * 3em) 0;
+    padding: calc(var(--ids__density) * 2.5em) 0 calc(var(--ids__density) * 2em);
+  }
+  
+  .hero-section__grid {
+    gap: 2em;
   }
   
   .hero-section__title {
-    font-size: 1.6em;
+    font-size: 1.7em;
   }
   
   .hero-section__subtitle {
-    display: none;
+    font-size: 1em;
+  }
+  
+  .hero-section__demo .phone-frame {
+    transform: scale(0.6);
   }
 }
 
-/* ============================================
-   Demo Section
-   ============================================ */
-
-.demo-section {
-  padding: calc(var(--ids__density) * 4em) 0;
+@media (max-width: 480px) {
+  .hero-section__demo .phone-frame {
+    transform: scale(0.5);
+  }
+  
+  .hero-section__title {
+    font-size: 1.5em;
+  }
 }
 
-.demo-section__inner {
-  background: rgb(var(--ids__surface-RGB));
-  border-radius: 24px;
-  padding: calc(var(--ids__density) * 3em) calc(var(--ids__density) * 3em);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(var(--ids__text-RGB), 0.04);
-}
-
-.demo-section__phone {
-  display: flex;
-  justify-content: center;
-}
 
 /* ============================================
    Pricing Section
