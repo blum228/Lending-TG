@@ -18,6 +18,13 @@
         color: rgb(var(--ids__text-RGB)) !important;
     }
 } 
+.header__logo-image {
+    height: 64px;
+    width: auto;
+    margin-right: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
 .header {
     display: flex;
     align-items: center; /* вертикальное выравнивание всех элементов */
@@ -31,20 +38,14 @@
     background-color: rgb(var(--ids__link-RGB));
     color: #fff !important;
     list-style: none !important;
-    padding: 8px 16px;
+    padding: 10px 20px;
     text-decoration: none !important;
-    font-size: 0.8em !important;
+    font-size: 0.9em !important;
     border-radius: 400px;
     font-weight: 600;
     &:hover {
         background-color: rgb(var(--ids__hover-RGB));
     }
-}
-.hero__button {
-    padding: 18px 24px;
-}
-.hero__button.header__button {
-  font-size: 1em !important;
 }
 /* Лого и CTA фиксированные по ширине, не растягиваются */
 .header > .header__logo { flex: 0 0 auto; }
@@ -147,11 +148,6 @@
     border-radius: 4px;
 }
 
-.hero__title {
-    font-size: 1.5em !important;
-    font-weight: 400 !important;
-    line-height: 1.2;
-}
 
 /* Mobile burger button */
 .header__burger {
@@ -235,21 +231,5 @@
     
     .header__button {
         margin-left: auto;
-    }
-}
-
-.hero__link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.hero__button_small {
-    background-color: rgb(var(--ids__accent-RGB) 0);
-    color: rgb(var(--ids__link-RGB)) !important;
-    font-size: 0.8em !important;
-    font-weight: 400;
-    &:hover {
-        background-color: rgb(var(--ids__accent-RGB) 0.1);
-        text-decoration: underline !important;
     }
 }
