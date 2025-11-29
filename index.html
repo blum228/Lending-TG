@@ -164,7 +164,7 @@
                     <!-- MAIN CHAT -->
                     <main class="tg-main" id="mainChat">
                       <div class="tg-chat-header" id="chatHeader" style="display: none;">
-                        <button class="tg-back-btn" onclick="closeChat()" style="display: flex;">
+                        <button class="tg-back-btn" onclick="closeChat()">
                           <svg class="icon" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                         </button>
                         <div class="tg-avatar small blue" id="headerAvatar">Н</div>
@@ -632,38 +632,26 @@
           name: '🎨 Дизайн',
           avatar: { letter: 'Д', color: 'violet' },
           subtitle: '12 каналов',
-          preview: 'Дизайн Кабак: Новый тренд в UI — неоморфизм возвращается...',
+          preview: 'Дизайн Кабак: Неоморфизм возвращается...',
           time: '14:32',
-          unread: 24,
+          unread: 3,
           messages: [
             { type: 'date', text: 'Сегодня' },
             { 
               from: 'Дизайн Кабак', 
-              text: 'Новый тренд в UI — неоморфизм возвращается, но уже в более сдержанной форме. Мягкие тени, минимум градиентов.',
+              text: 'Неоморфизм возвращается в UI — мягкие тени, минимум градиентов.',
               time: '12:15',
               avatar: { letter: 'ДК', color: 'violet' }
             },
             { 
               from: 'Awdee', 
-              text: 'Figma выкатила обновление: Auto Layout стал ещё умнее. Теперь можно задавать min/max width прямо в свойствах.',
-              time: '12:47',
+              text: 'Figma обновилась: Auto Layout теперь поддерживает min/max width.',
+              time: '13:22',
               avatar: { letter: 'A', color: 'blue' }
             },
             { 
-              from: 'Design & Productivity', 
-              text: '5 расширений для Figma, которые сэкономят вам часы работы:\n\n1. Stark — проверка контрастности\n2. Content Reel — генерация контента\n3. Autoflow — стрелки и флоу\n4. Unsplash — фото прямо в макет\n5. Iconify — 100k+ иконок',
-              time: '13:22',
-              avatar: { letter: 'D', color: 'green' }
-            },
-            { 
-              from: 'Дизайн Кабак', 
-              text: 'Вакансия: Senior Product Designer в Яндекс. Удалёнка, от 400к. Кто хочет — пишите в личку.',
-              time: '14:01',
-              avatar: { letter: 'ДК', color: 'violet' }
-            },
-            { 
               from: 'UX Notes', 
-              text: 'Почему пользователи не читают ваши тексты?\n\nПотому что вы пишете для себя, а не для них. F-паттерн никто не отменял.',
+              text: 'F-паттерн чтения: пользователи сканируют, а не читают.',
               time: '14:32',
               avatar: { letter: 'UX', color: 'orange' }
             },
@@ -674,34 +662,28 @@
           name: '🤖 AI & ML',
           avatar: { letter: 'AI', color: 'blue' },
           subtitle: '8 каналов',
-          preview: 'AI News: OpenAI анонсировала GPT-5...',
+          preview: 'AI News: GPT-5 анонсирован...',
           time: '14:28',
-          unread: 12,
+          unread: 5,
           messages: [
             { type: 'date', text: 'Сегодня' },
             { 
               from: 'AI News', 
-              text: 'OpenAI анонсировала GPT-5. Главное:\n\n• Контекст 1M токенов\n• Мультимодальность из коробки\n• Reasoning на уровне PhD\n• Цена x2 от GPT-4',
+              text: 'GPT-5: контекст 1M токенов, мультимодальность из коробки.',
               time: '11:45',
               avatar: { letter: 'AI', color: 'green' }
             },
             { 
               from: 'Машинное обучение', 
-              text: 'Anthropic выложили исследование по интерпретируемости Claude. Оказывается, модель реально "думает" — есть внутренние цепочки рассуждений.',
+              text: 'Claude умеет "думать" — найдены внутренние цепочки рассуждений.',
               time: '12:30',
               avatar: { letter: 'ML', color: 'cyan' }
             },
             { 
               from: 'Нейросети для всех', 
-              text: 'Midjourney v7 — первые примеры. Фотореализм вышел на новый уровень. Руки наконец-то нормальные 🙌',
-              time: '13:15',
-              avatar: { letter: 'Н', color: 'pink' }
-            },
-            { 
-              from: 'AI News', 
-              text: 'Google DeepMind показали AlphaFold 3. Теперь предсказывает не только белки, но и взаимодействие с лекарствами.',
+              text: 'Midjourney v7: фотореализм нового уровня 🙌',
               time: '14:28',
-              avatar: { letter: 'AI', color: 'green' }
+              avatar: { letter: 'Н', color: 'pink' }
             },
           ]
         },
@@ -710,26 +692,26 @@
           name: '📈 Маркетинг',
           avatar: { letter: 'М', color: 'orange' },
           subtitle: '15 каналов',
-          preview: 'Маркетинг и PR: Кейс: как мы увеличили конверсию...',
+          preview: 'Growth Hacks: Telegram Ads для всех...',
           time: '13:55',
           unread: 0,
           messages: [
             { type: 'date', text: 'Сегодня' },
             { 
               from: 'Маркетинг и PR', 
-              text: 'Кейс: как мы увеличили конверсию лендинга с 2% до 8%.\n\nСпойлер: убрали 70% текста и добавили видео-демо продукта.',
+              text: 'Конверсия с 2% до 8%: убрали текст, добавили видео-демо.',
               time: '10:20',
               avatar: { letter: 'PR', color: 'orange' }
             },
             { 
               from: 'Growth Hacks', 
-              text: 'Telegram Ads теперь доступны для всех. Минимальный бюджет — €500. CPM от €2.',
+              text: 'Telegram Ads доступны для всех. Бюджет от €500.',
               time: '11:45',
               avatar: { letter: 'GH', color: 'green' }
             },
             { 
               from: 'Контент-маркетинг', 
-              text: 'SEO в 2025: Google официально подтвердил — поведенческие факторы важнее ссылок. Время на сайте и глубина просмотра решают.',
+              text: 'SEO 2025: поведенческие факторы важнее ссылок.',
               time: '13:55',
               avatar: { letter: 'К', color: 'blue' }
             },
@@ -740,20 +722,20 @@
           name: '💰 Крипта',
           avatar: { letter: '₿', color: 'orange' },
           subtitle: '6 каналов',
-          preview: 'Crypto Daily: BTC пробил $100k...',
+          preview: 'Crypto Daily: BTC $100k 🚀',
           time: '13:40',
-          unread: 5,
+          unread: 2,
           messages: [
             { type: 'date', text: 'Сегодня' },
             { 
               from: 'Crypto Daily', 
-              text: '🚀 BTC пробил $100k!\n\nИсторический момент. ETF-ы залили $2B за день.',
+              text: '🚀 BTC пробил $100k! ETF-ы залили $2B за день.',
               time: '09:30',
               avatar: { letter: '₿', color: 'orange' }
             },
             { 
               from: 'DeFi Insights', 
-              text: 'Новый L2 от Coinbase показывает TPS 10,000. Комиссии меньше цента. Ethereum киллер? Вряд ли, но интересно.',
+              text: 'L2 от Coinbase: TPS 10,000, комиссии < 1 цента.',
               time: '11:20',
               avatar: { letter: 'D', color: 'blue' }
             },
@@ -765,60 +747,6 @@
             },
           ]
         },
-        {
-          id: 'dev',
-          name: '👨‍💻 Разработка',
-          avatar: { letter: '<>', color: 'green' },
-          subtitle: '10 каналов',
-          preview: 'Frontend Daily: React 19 — что нового...',
-          time: '12:50',
-          unread: 0,
-          messages: [
-            { type: 'date', text: 'Сегодня' },
-            { 
-              from: 'Frontend Daily', 
-              text: 'React 19 — что нового:\n\n• use() хук для промисов\n• Улучшенный Suspense\n• Автоматический батчинг\n• Новый компилятор',
-              time: '10:15',
-              avatar: { letter: 'FE', color: 'cyan' }
-            },
-            { 
-              from: 'Backend News', 
-              text: 'Bun 2.0 вышел. Теперь полностью совместим с Node.js. Скорость — x3.',
-              time: '11:30',
-              avatar: { letter: 'BE', color: 'green' }
-            },
-            { 
-              from: 'DevOps Weekly', 
-              text: 'Docker Desktop теперь бесплатный для команд до 250 человек. Наконец-то.',
-              time: '12:50',
-              avatar: { letter: 'DO', color: 'blue' }
-            },
-          ]
-        },
-        {
-          id: 'news',
-          name: '📰 Новости',
-          avatar: { letter: 'Н', color: 'red' },
-          subtitle: '5 каналов',
-          preview: 'Новости IT: Apple представила Vision Pro 2...',
-          time: '11:20',
-          unread: 3,
-          messages: [
-            { type: 'date', text: 'Сегодня' },
-            { 
-              from: 'Новости IT', 
-              text: 'Apple представила Vision Pro 2:\n\n• Вес уменьшен на 40%\n• Цена $2,499\n• Батарея 4 часа\n• Совместимость с Mac',
-              time: '10:00',
-              avatar: { letter: 'IT', color: 'red' }
-            },
-            { 
-              from: 'Tech Insider', 
-              text: 'Илон Маск купил ещё одну компанию. На этот раз — производителя чипов для AI.',
-              time: '11:20',
-              avatar: { letter: 'TI', color: 'blue' }
-            },
-          ]
-        },
       ];
 
       // ═══════════════════════════════════════════════════════════
@@ -827,8 +755,8 @@
 
       function renderChatList() {
         const container = document.getElementById('chatList');
-        container.innerHTML = CHATS.map(chat => `
-          <div class="tg-chat-item" data-chat-id="${chat.id}" onclick="openChat('${chat.id}')">
+        container.innerHTML = CHATS.map((chat, index) => `
+          <div class="tg-chat-item${index === 0 ? ' demo-hint' : ''}" data-chat-id="${chat.id}" onclick="openChat('${chat.id}')">
             <div class="tg-avatar ${chat.avatar.color}">${chat.avatar.letter}</div>
             <div class="tg-chat-info">
               <div class="tg-chat-top">
@@ -877,9 +805,9 @@
           `;
         }).join('');
         
-        // Scroll to bottom
+        // Scroll to top for animation
         const messagesArea = document.getElementById('messagesArea');
-        messagesArea.scrollTop = messagesArea.scrollHeight;
+        messagesArea.scrollTop = 0;
       }
 
       // ═══════════════════════════════════════════════════════════
@@ -913,14 +841,17 @@
         // Render messages
         renderMessages(chatId);
         
-        // Mobile: show chat
-        document.getElementById('app').classList.add('chat-open');
+        // Mobile: show chat and mark as interacted (hides demo hint)
+        const app = document.getElementById('app');
+        app.classList.add('chat-open');
+        app.classList.add('interacted');
         
         // Start smooth animation
         setTimeout(() => animateMessagesIn(), 100);
       }
 
       function closeChat() {
+        
         document.getElementById('app').classList.remove('chat-open');
         
         // Hide chat elements
@@ -948,7 +879,7 @@
         // Scroll to top first
         messagesArea.scrollTop = 0;
         
-        // Animate each item with 2 second delay between them
+        // Animate each item with 800ms delay between them (faster for demo)
         items.forEach((item, index) => {
           setTimeout(() => {
             item.classList.add('animate-in');
@@ -957,14 +888,14 @@
               top: messagesArea.scrollHeight,
               behavior: 'smooth'
             });
-          }, index * 2000); // Эффект постепенного появления
+          }, index * 800);
         });
       }
 
       // ═══════════════════════════════════════════════════════════
       // INIT
       // ═══════════════════════════════════════════════════════════
-
+      
       document.addEventListener('DOMContentLoaded', () => {
         renderChatList();
       });

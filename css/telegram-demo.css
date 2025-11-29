@@ -104,6 +104,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .tg-main { display: none; }
@@ -147,7 +149,7 @@
 }
 
 .tg-search::placeholder { color: var(--tg-text-secondary); }
-.tg-chat-list { flex: 1; overflow-y: auto; padding: 8px 0; }
+.tg-chat-list { flex: 1; overflow-y: auto; padding: 8px 0; min-height: 0; }
 
 .tg-chat-item {
   display: flex;
@@ -155,11 +157,13 @@
   padding: 8px 12px;
   gap: 12px;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.1s;
   position: relative;
+  user-select: none;
 }
 
 .tg-chat-item:hover { background: var(--tg-hover); }
+.tg-chat-item:active { background: var(--tg-active); transform: scale(0.98); }
 .tg-chat-item.active { background: var(--tg-active); }
 
 .tg-chat-item.active::before {
@@ -223,7 +227,7 @@
 }
 
 .tg-chat-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.tg-main { flex: 1; display: flex; flex-direction: column; background: var(--tg-bg-chat); min-width: 0; }
+.tg-main { flex: 1; display: flex; flex-direction: column; background: var(--tg-bg-chat); min-width: 0; height: 100%; overflow: hidden; }
 
 .tg-chat-header {
   height: 56px;
@@ -236,7 +240,7 @@
 }
 
 .tg-back-btn {
-  display: none;
+  display: flex;
   width: 40px;
   height: 40px;
   border: none;
@@ -245,10 +249,13 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  color: var(--tg-text-secondary);
+  color: var(--tg-accent);
+  transition: background 0.15s, transform 0.1s;
+  flex-shrink: 0;
 }
 
-@media (max-width: 900px) { .tg-back-btn { display: flex; } }
+.tg-back-btn:hover { background: var(--tg-hover); }
+.tg-back-btn:active { background: var(--tg-active); transform: scale(0.9); }
 
 .tg-header-info { flex: 1; min-width: 0; }
 .tg-header-title { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -270,9 +277,10 @@
 }
 
 .tg-icon-btn:hover { background: var(--tg-hover); }
+.tg-icon-btn:active { background: var(--tg-active); }
 
-.tg-messages { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 8px 0; }
-.tg-messages-inner { width: 100%; padding: 0 12px 40px; display: flex; flex-direction: column; gap: 4px; }
+.tg-messages { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 8px 0; min-height: 0; }
+.tg-messages-inner { width: 100%; padding: 0 12px 16px; display: flex; flex-direction: column; gap: 4px; }
 .tg-date-separator { display: flex; justify-content: center; padding: 8px 0; }
 
 .tg-date-separator span {
@@ -290,7 +298,8 @@
 .tg-message-avatar { flex-shrink: 0; margin-bottom: 2px; }
 .tg-message.outgoing .tg-message-avatar { display: none; }
 .tg-bubble { padding: 6px 12px 7px; border-radius: var(--tg-radius-bubble); position: relative; word-wrap: break-word; }
-.tg-message.incoming .tg-bubble { background: var(--tg-bg-bubble-in); border-bottom-left-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+.tg-message.incoming .tg-bubble { background: var(--tg-bg-bubble-in); border-bottom-left-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.08); cursor: pointer; transition: box-shadow 0.15s; }
+.tg-message.incoming .tg-bubble:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
 .tg-message.outgoing .tg-bubble { background: var(--tg-bg-bubble-out); border-bottom-right-radius: 4px; }
 .tg-message-sender { font-size: 13px; font-weight: 600; margin-bottom: 2px; color: var(--tg-accent); }
 .tg-message-text { font-size: 14px; line-height: 1.4; white-space: pre-wrap; }
@@ -336,9 +345,11 @@
   outline: none;
   max-height: 200px;
   line-height: 1.4;
+  cursor: text;
 }
 
 .tg-input::placeholder { color: var(--tg-text-secondary); }
+.tg-input:focus::placeholder { color: var(--tg-text-secondary); opacity: 0.7; }
 
 .tg-send-btn {
   width: 40px;
@@ -351,10 +362,12 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.1s;
+  flex-shrink: 0;
 }
 
 .tg-send-btn:hover { background: var(--tg-accent-hover); }
+.tg-send-btn:active { transform: scale(0.9); }
 
 .tg-app ::-webkit-scrollbar { width: 6px; }
 .tg-app ::-webkit-scrollbar-track { background: transparent; }
@@ -372,4 +385,20 @@
 /* Phone wrapper adjustments for demo section */
 .demo-section__phone .telegram-demo-wrapper {
   padding: 0;
+}
+
+/* Demo hint - subtle glow on first chat */
+.tg-chat-item.demo-hint {
+  animation: demoGlow 3s ease-in-out infinite;
+}
+
+@keyframes demoGlow {
+  0%, 100% { background: transparent; }
+  50% { background: rgba(51, 144, 236, 0.08); }
+}
+
+/* Remove hint when any chat is opened */
+.tg-app.interacted .tg-chat-item.demo-hint {
+  animation: none;
+  background: transparent;
 }
